@@ -277,7 +277,7 @@ custom_logo:
 # Available value:
 #    normal | night | night eighties | night blue | night bright
 # https://github.com/chriskempson/tomorrow-theme
-highlight_theme: night
+highlight_theme: normal
 
 
 # ---------------------------------------------------------------
@@ -293,7 +293,7 @@ highlight_theme: night
 # Arial | Tahoma | Helvetica | Times New Roman | Courier New | Verdana | Georgia | Palatino | Garamond | Comic Sans MS | Trebuchet MS
 # ---------------------------------------------------------------
 font:
-  enable: false
+  enable: true
 
   # Uri of fonts host. E.g. //fonts.googleapis.com (Default).
   host:
@@ -307,7 +307,7 @@ font:
   global:
     external: true
     family: Lato
-    size:
+    size: 16
 
   # Font settings for Headlines (h1, h2, h3, h4, h5, h6).
   # Fallback to `global` font settings.
@@ -333,7 +333,7 @@ font:
   codes:
     external: true
     family:
-    size:
+    size: 15
 
 
 # ---------------------------------------------------------------
@@ -553,15 +553,15 @@ busuanzi_count:
   # custom uv span for the whole site
   site_uv: true
   site_uv_header: <i class="fa fa-user"></i>
-  site_uv_footer:
+  site_uv_footer: 人次
   # custom pv span for the whole site
   site_pv: true
   site_pv_header: <i class="fa fa-eye"></i>
-  site_pv_footer:
+  site_pv_footer: 次
   # custom pv span for one page only
   page_pv: true
   page_pv_header: <i class="fa fa-file-o"></i>
-  page_pv_footer:
+  page_pv_footer: 次
 
 
 # Tencent analytics ID
