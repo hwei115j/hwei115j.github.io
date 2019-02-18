@@ -46,7 +46,7 @@ x220換硬碟真的很方便
 ## 測試
 水晶 雫
 空載34度
-{% asset_img lvKMq5K.jpg %}
+{% asset_img L0YgEsZ.jpg %}
 
 跑個測試
 比原來的ezlink好了不少
