@@ -1,7 +1,11 @@
 ---
 title: 用rclone的筆記
 date: 2019-02-12 01:20:07
+categories:
+    - 筆記
 tags:
+    - 筆記
+    - 備份
 ---
 
 ## 前言

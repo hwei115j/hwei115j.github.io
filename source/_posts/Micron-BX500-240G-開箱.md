@@ -32,6 +32,8 @@ tags:
 <font color= #DC143C>嗯?上面沒有防拆貼紙?"</font>
 那就.....
 
+{% asset_img Dt2Ax7G.jpg %}
+{% asset_img ixKSAXQ.jpg %}
 好八
 拆開，我也看不懂QQ
 看的懂的地方是沒有DRAM暫存，效能感覺不會太理想
@@ -46,12 +48,12 @@ x220換硬碟真的很方便
 ## 測試
 水晶 雫
 空載34度
-{% asset_img lvKMq5K.jpg %}
+{% asset_img L0YgEsZ.jpg %}
 
 跑個測試
 比原來的ezlink好了不少
-{% asset_img Fy4dznb.jpg  %}
-{% asset_img loGMdzb.jpg  %}
+{% asset_img Fy4dznb.jpg %}
+{% asset_img loGMdzb.jpg %}
 
 這資料是怎麼回事.....
 {% asset_img y1ccSsV.jpg %}
