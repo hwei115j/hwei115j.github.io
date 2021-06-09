@@ -128,7 +128,7 @@ http://zwindr.blogspot.tw/2017/05/lineageos-note-4x.html
 
 ## 後續
 
-這篇一樣是以前就寫的在[PTT](https://www.ptt.cc/bbs/MobileComm/M.1523782182.A.0B1.html)上的，現在把他重新轉到blog上
+這篇一樣是以前就寫的在PTT上的，現在把他重新轉到blog上
 
 現在也換了新手機(zenfone 5)，這隻給我阿嬤用了
 
