@@ -21,16 +21,16 @@ tags:
         rclone 動作 來源地址 目標地址 flag
 
 ##  常用動作
-
+``` bash
     config  (設定)
     ls      (列出目錄與子目錄底下全部的元素)
     lsd     (只列出目錄底下的元素)
     copy    (複製，略過已經複製過的)
     sync    (同步，以來源為準，目標少的會複製、多的會刪除)
     來源位置&目標位置可為 本機位置 或 遠端位置
-
+```
 flag常用的有
-
+```bash
     -v
     （顯示完整資訊，想要顯示進度要有這項）
     --bwlimit xxxxK/M/G
@@ -43,14 +43,14 @@ flag常用的有
     （試跑一次，看看會對目標做什麼變動）
     --transfers int
     (一次傳送多少個檔案，預設為4)
-
+```
 範例
-
+```bash
      rclone copy D1: D2: -v -size-only -bwlimit 1800k
      (從 D1: 複製到 D2:，顯示完整資訊 只比對雙方檔案大小 上傳速度1800KB/s)
      rclone sync D1:test/ D2:test/ -v -size-only
      (從 D1: 同步到 D2:，顯示完整資訊 只比對雙方檔案大小)
-
+```
 ## 過濾器
 
 rclone 不能直接在路徑上使用萬用字元，要配合一種flag來使用
@@ -62,7 +62,7 @@ rclone 不能直接在路徑上使用萬用字元，要配合一種flag來使用
 如果模式以"/"開頭，代表他在目錄的頂層，不往下搜尋
 
 例如:
-
+```bash
     rclone ls D1: --include *.jpg
     會列出:
         D1:1.jpg
@@ -75,7 +75,7 @@ rclone 不能直接在路徑上使用萬用字元，要配合一種flag來使用
     則只會印出
         D1:1.jpg
         D1:2.jpg
-
+```
 p.s. windows v1.44好像沒辦法用"/"?
 
 ## 結合管線使用
@@ -129,7 +129,7 @@ http://www.vixual.net/blog/archives/127
 好心人寫的[腳本](https://github.com/Riebart/pipechunker)，可以把tar的資料串流，分隔成一個一個的塊，再借由rclone上傳到雲端硬碟
 
 作者給的使用範例：
-
+```bash
     tar -cf - MyMachine/ |
     gpg --compress-algo none -er me@example.com | pv |
     python3 ~/Desktop/pipechunk.py
@@ -139,7 +139,7 @@ http://www.vixual.net/blog/archives/127
     --command '["rclone", "rcat", "--verbose", "--stats", "10s"]'
     --chunk-size 50000000
     --parallel 8
-
+```
 `--chunk-size`是指要每個分割檔要多大，範例是50MB一個分割，上傳後的檔案名會是 file\_name.0001，file\_name.0002 以此類推
 
 需要注意的是`--command` 裡的參數每有一個空格就要加一次""
