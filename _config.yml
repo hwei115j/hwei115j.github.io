@@ -80,5 +80,5 @@ theme: next
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: git@github.com:hwei115j.github.io.git
+  repo: git@github.com:hwei115j/hwei115j.github.io.git
   branch: master
