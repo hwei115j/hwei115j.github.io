@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Noto Sans CJK TC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"hwei115j.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="前言還是記個筆記吧 暑假時用的rclone，寒假就全忘光了….雖然有存當初的網址，但重新掌握還是需要時間加上這次學了不少新東西，還是記個筆記比較實在… 使用方法    rclone 動作 來源地址 目標地址 flag  常用動作123456config  (設定)ls      (列出目錄與子目錄底下全部的元素)lsd     (只列出目錄底下的元素)copy    (複製，略過已經複製過的)sy">
+<meta property="og:type" content="article">
+<meta property="og:title" content="用rclone的筆記">
+<meta property="og:url" content="https://hwei115j.github.io/2019/02/12/%E7%94%A8rclone%E7%9A%84%E7%AD%86%E8%A8%98/index.html">
+<meta property="og:site_name" content="wei&#39;s Blog">
+<meta property="og:description" content="前言還是記個筆記吧 暑假時用的rclone，寒假就全忘光了….雖然有存當初的網址，但重新掌握還是需要時間加上這次學了不少新東西，還是記個筆記比較實在… 使用方法    rclone 動作 來源地址 目標地址 flag  常用動作123456config  (設定)ls      (列出目錄與子目錄底下全部的元素)lsd     (只列出目錄底下的元素)copy    (複製，略過已經複製過的)sy">
+<meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2019-02-11T17:20:07.000Z">
+<meta property="article:modified_time" content="2023-04-27T17:33:35.953Z">
+<meta property="article:author" content="wei">
+<meta property="article:tag" content="筆記">
+<meta property="article:tag" content="備份">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://hwei115j.github.io/2019/02/12/%E7%94%A8rclone%E7%9A%84%E7%AD%86%E8%A8%98/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-TW'
+  };
+</script>
+
+  <title>用rclone的筆記 | wei's Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">wei's Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://hwei115j.github.io/2019/02/12/%E7%94%A8rclone%E7%9A%84%E7%AD%86%E8%A8%98/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="wei">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="wei's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          用rclone的筆記
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2019-02-12 01:20:07" itemprop="dateCreated datePublished" datetime="2019-02-12T01:20:07+08:00">2019-02-12</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新於</span>
+                <time title="修改時間：2023-04-28 01:33:35" itemprop="dateModified" datetime="2023-04-28T01:33:35+08:00">2023-04-28</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分類於</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%AD%86%E8%A8%98/" itemprop="url" rel="index"><span itemprop="name">筆記</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="閱讀次數" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">閱讀次數：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus：</span>
+    
+    <a title="disqus" href="/2019/02/12/%E7%94%A8rclone%E7%9A%84%E7%AD%86%E8%A8%98/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/02/12/用rclone的筆記/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>還是記個筆記吧</p>
+<p>暑假時用的rclone，寒假就全忘光了….<br>雖然有存當初的網址，但重新掌握還是需要時間<br>加上這次學了不少新東西，還是記個筆記比較實在…</p>
+<h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><pre><code>    rclone 動作 來源地址 目標地址 flag
+</code></pre>
+<h2 id="常用動作"><a href="#常用動作" class="headerlink" title="常用動作"></a>常用動作</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">config  (設定)</span><br><span class="line">ls      (列出目錄與子目錄底下全部的元素)</span><br><span class="line">lsd     (只列出目錄底下的元素)</span><br><span class="line">copy    (複製，略過已經複製過的)</span><br><span class="line">sync    (同步，以來源為準，目標少的會複製、多的會刪除)</span><br><span class="line">來源位置&amp;目標位置可為 本機位置 或 遠端位置</span><br></pre></td></tr></table></figure>
+<p>flag常用的有</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">-v</span><br><span class="line">（顯示完整資訊，想要顯示進度要有這項）</span><br><span class="line">--bwlimit xxxxK/M/G</span><br><span class="line">（限制上傳速度，後面是單位可為K/M/G，例如：--bwlimit 8000k)</span><br><span class="line">--checksum</span><br><span class="line">（上傳時做完整檢查，以確保來源與目標完全相同(<span class="built_in">hash</span>?)，需要注意的是，過程中硬碟會不停的讀取且速度會降低）</span><br><span class="line">--size-only</span><br><span class="line">（上傳時只比對檔案的大小，相對checksum快，但可能有錯）</span><br><span class="line">--dry-run</span><br><span class="line">（試跑一次，看看會對目標做什麼變動）</span><br><span class="line">--transfers int</span><br><span class="line">(一次傳送多少個檔案，預設為4)</span><br></pre></td></tr></table></figure>
+<p>範例</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">rclone copy D1: D2: -v -size-only -bwlimit 1800k</span><br><span class="line">(從 D1: 複製到 D2:，顯示完整資訊 只比對雙方檔案大小 上傳速度1800KB/s)</span><br><span class="line">rclone sync D1:<span class="built_in">test</span>/ D2:<span class="built_in">test</span>/ -v -size-only</span><br><span class="line">(從 D1: 同步到 D2:，顯示完整資訊 只比對雙方檔案大小)</span><br></pre></td></tr></table></figure>
+<h2 id="過濾器"><a href="#過濾器" class="headerlink" title="過濾器"></a>過濾器</h2><p>rclone 不能直接在路徑上使用萬用字元，要配合一種flag來使用</p>
+<p>例如不能用 <code>D1:test/*.jpg</code> 來表示 <code>D1:test/</code>  目錄下的全部jpg檔要使用 <code>D1:test/ --include *.jpg</code> 來表示<br>其中規則應該是支援正規表達式的，不過我對正規不太熟…..</p>
+<p>因為我對這也不熟，所以我就直接用官網的範例了….<br>如果模式以”/“開頭，代表他在目錄的頂層，不往下搜尋</p>
+<p>例如:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">rclone ls D1: --include *.jpg</span><br><span class="line">會列出:</span><br><span class="line">    D1:1.jpg</span><br><span class="line">    D1:2.jpg</span><br><span class="line">但也會列出:</span><br><span class="line">    D1:<span class="built_in">test</span>/1.jpg</span><br><span class="line">    D1:<span class="built_in">test</span>/2.jpg</span><br><span class="line">如果改成：</span><br><span class="line">    rclone ls D1: --include /*.jpg</span><br><span class="line">則只會印出</span><br><span class="line">    D1:1.jpg</span><br><span class="line">    D1:2.jpg</span><br></pre></td></tr></table></figure>
+<p>p.s. windows v1.44好像沒辦法用”/“?</p>
+<h2 id="結合管線使用"><a href="#結合管線使用" class="headerlink" title="結合管線使用"></a>結合管線使用</h2><p>這不做筆記我一定會忘掉……</p>
+<p>rclone 有兩個指令:</p>
+<pre><code>cat
+rcat
+</code></pre>
+<p>cat 和 linux 上的基本一樣，就是把檔案從stdout印出來，不過rclone cat 可以印目錄<br>（ex: <code>rclone cat D1:</code> 把D1:和子目錄底下的檔案全部印出來）</p>
+<p>rcat 做的事和 cat 相反，他是將stdin的東西存到一個檔案裡<br>(ex: <code>cat file.txt | rclone rcat D1:file.txt</code>)</p>
+<p>結合tar便可以將小檔案打包起來，藉由管線傳到rclone去處理<br>再加上這個好心人的<a target="_blank" rel="noopener" href="https://github.com/Riebart/pipechunker">腳本</a>，便可分割上傳<br>(我不會python不知道他有沒有暫存檔案，但好像沒有？)</p>
+<h3 id="tar使用"><a href="#tar使用" class="headerlink" title="tar使用"></a>tar使用</h3><p>tar 常用指令（原諒我不學無術又偷懶:P)<br><a target="_blank" rel="noopener" href="http://www.vixual.net/blog/archives/127">http://www.vixual.net/blog/archives/127</a></p>
+<h3 id="gpg-ASE-加密"><a href="#gpg-ASE-加密" class="headerlink" title="gpg ASE 加密"></a>gpg ASE 加密</h3><p>用gnupg ase 256加密</p>
+<p><code>gpg --symmetric --cipher-algo AES256</code><br>輸入來自stdin，輸出至stdout<br>這個指令會要你輸入兩次密碼</p>
+<p>解密時用gpg就好了<br>輸入一樣來至stdin，輸出一樣至stdout<br>如果要存入檔案，可以用<code>gpg | cat &gt; file</code></p>
+<p>有些裝置會顯示<br><code>gpg: signing failed: Inappropriate ioctl for device</code></p>
+<p>可用 <code>export GPG_TTY=$(tty)</code> 解決</p>
+<h3 id="pv顯示進度"><a href="#pv顯示進度" class="headerlink" title="pv顯示進度"></a>pv顯示進度</h3><p>這東西好像會顯示管線的進度（已經傳多少MB，現在每秒多少MB)<br>使用 | pv | 夾在管線和管線中間即可使用</p>
+<h3 id="pipechunk-py"><a href="#pipechunk-py" class="headerlink" title="pipechunk.py"></a>pipechunk.py</h3><p>好心人寫的<a target="_blank" rel="noopener" href="https://github.com/Riebart/pipechunker">腳本</a>，可以把tar的資料串流，分隔成一個一個的塊，再借由rclone上傳到雲端硬碟</p>
+<p>作者給的使用範例：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">tar -cf - MyMachine/ |</span><br><span class="line">gpg --compress-algo none -er me@example.com | pv |</span><br><span class="line">python3 ~/Desktop/pipechunk.py</span><br><span class="line">--name</span><br><span class="line"><span class="string">&quot;od:/WindowsImageBackup/MyMachine.2018-12-01/MyMachine-2018-12-01</span></span><br><span class="line"><span class="string">.tar.enc&quot;</span></span><br><span class="line">--<span class="built_in">command</span> <span class="string">&#x27;[&quot;rclone&quot;, &quot;rcat&quot;, &quot;--verbose&quot;, &quot;--stats&quot;, &quot;10s&quot;]&#x27;</span></span><br><span class="line">--chunk-size 50000000</span><br><span class="line">--parallel 8</span><br></pre></td></tr></table></figure>
+<p><code>--chunk-size</code>是指要每個分割檔要多大，範例是50MB一個分割，上傳後的檔案名會是 file_name.0001，file_name.0002 以此類推</p>
+<p>需要注意的是<code>--command</code> 裡的參數每有一個空格就要加一次””<br>例如我想要加上 <code>--bwlimit 1500K</code>，就要寫成<code>&#39;[&quot;--bwlimit&quot;, &quot;1500K&quot;]&#39;</code></p>
+<h3 id="注意事項"><a href="#注意事項" class="headerlink" title="注意事項"></a>注意事項</h3><ul>
+<li><p>不會python，看了老半天也不知道他是全部分割好再上傳還是，串流上傳，不過我傾向於後者</p>
+</li>
+<li><p>補充，上傳大檔案後發現應該是串流上傳，並且會使用RAM做暫存如果一個區塊大小是1G <code>--parallel</code>為8 的話會吃8G的RAM，可以適時的調整區塊大小和<code>--parallel</code></p>
+</li>
+<li><p><code>--parallel</code>參數是開幾個rclone同時上傳，如果<code>--parallel</code>為4，<code>--bwlimit 500k</code>上傳限制就會是500k*4 = 2000k</p>
+</li>
+</ul>
+<h3 id="下載再還原"><a href="#下載再還原" class="headerlink" title="下載再還原"></a>下載再還原</h3><p>如果還是要使用管線來達成可用rclone cat指令，將全部的分割檔全部下載並還原</p>
+<p>例如： <code>rclone cat D1:tar/ | gpg | pv | tar -x</code></p>
+<p>大概4jone，之後想到什麼再寫上來…</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E7%AD%86%E8%A8%98/" rel="tag"># 筆記</a>
+              <a href="/tags/%E5%82%99%E4%BB%BD/" rel="tag"># 備份</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2019/02/11/Micron-BX500-240G-%E9%96%8B%E7%AE%B1/" rel="prev" title="Micron BX500 240G 開箱">
+      <i class="fa fa-chevron-left"></i> Micron BX500 240G 開箱
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2019/04/23/%E5%88%A9%E7%94%A8Gutentags%E5%92%8Cctags%E9%96%B1%E8%AE%80%E7%A8%8B%E5%BC%8F%E7%A2%BC/" rel="next" title="利用Gutentags和ctags閱讀程式碼">
+      利用Gutentags和ctags閱讀程式碼 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    
+  <div class="comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+  </div>
+  
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95"><span class="nav-number">2.</span> <span class="nav-text">使用方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E5%8B%95%E4%BD%9C"><span class="nav-number">3.</span> <span class="nav-text">常用動作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%81%8E%E6%BF%BE%E5%99%A8"><span class="nav-number">4.</span> <span class="nav-text">過濾器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B5%90%E5%90%88%E7%AE%A1%E7%B7%9A%E4%BD%BF%E7%94%A8"><span class="nav-number">5.</span> <span class="nav-text">結合管線使用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#tar%E4%BD%BF%E7%94%A8"><span class="nav-number">5.1.</span> <span class="nav-text">tar使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#gpg-ASE-%E5%8A%A0%E5%AF%86"><span class="nav-number">5.2.</span> <span class="nav-text">gpg ASE 加密</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pv%E9%A1%AF%E7%A4%BA%E9%80%B2%E5%BA%A6"><span class="nav-number">5.3.</span> <span class="nav-text">pv顯示進度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pipechunk-py"><span class="nav-number">5.4.</span> <span class="nav-text">pipechunk.py</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A0%85"><span class="nav-number">5.5.</span> <span class="nav-text">注意事項</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8B%E8%BC%89%E5%86%8D%E9%82%84%E5%8E%9F"><span class="nav-number">5.6.</span> <span class="nav-text">下載再還原</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">wei</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">9</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">標籤</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/hwei115j" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;hwei115j" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">wei</span>
+</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="訪客總數">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="總瀏覽次數">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+<script>
+  function loadCount() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://wei.disqus.com/count.js';
+    s.id = 'dsq-count-scr';
+    (d.head || d.body).appendChild(s);
+  }
+  // defer loading until the whole page loading is completed
+  window.addEventListener('load', loadCount, false);
+</script>
+<script>
+  var disqus_config = function() {
+    this.page.url = "https://hwei115j.github.io/2019/02/12/%E7%94%A8rclone%E7%9A%84%E7%AD%86%E8%A8%98/";
+    this.page.identifier = "2019/02/12/用rclone的筆記/";
+    this.page.title = "用rclone的筆記";
+    };
+  NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
+    if (window.DISQUS) {
+      DISQUS.reset({
+        reload: true,
+        config: disqus_config
+      });
+    } else {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://wei.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', '' + +new Date());
+      (d.head || d.body).appendChild(s);
+    }
+  });
+</script>
+
+</body>
+</html>

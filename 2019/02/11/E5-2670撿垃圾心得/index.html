@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Noto Sans CJK TC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"hwei115j.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="原本只是想買一個散熱器，結果爬文的時候看到有人說e5-2670很便宜，查了一下，結果就買下去了，電腦當然不能只買主機，所以連螢幕也買了，買了這些之後，還差一 個鍵盤…..結果就沒錢啦QQ 先說一下我的用途：上網、看影片，文書機就能滿足的需求結果我的電腦： CPU (中央處理器)：INTEL E5-2670 （8c16t)       MB (主機板)：HP z420 (拆機板）  RAM (記憶體">
+<meta property="og:type" content="article">
+<meta property="og:title" content="E5-2670撿垃圾心得">
+<meta property="og:url" content="https://hwei115j.github.io/2019/02/11/E5-2670%E6%92%BF%E5%9E%83%E5%9C%BE%E5%BF%83%E5%BE%97/index.html">
+<meta property="og:site_name" content="wei&#39;s Blog">
+<meta property="og:description" content="原本只是想買一個散熱器，結果爬文的時候看到有人說e5-2670很便宜，查了一下，結果就買下去了，電腦當然不能只買主機，所以連螢幕也買了，買了這些之後，還差一 個鍵盤…..結果就沒錢啦QQ 先說一下我的用途：上網、看影片，文書機就能滿足的需求結果我的電腦： CPU (中央處理器)：INTEL E5-2670 （8c16t)       MB (主機板)：HP z420 (拆機板）  RAM (記憶體">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://hwei115j.github.io/2019/02/11/E5-2670%E6%92%BF%E5%9E%83%E5%9C%BE%E5%BF%83%E5%BE%97/c4INgqo.jpg">
+<meta property="og:image" content="https://hwei115j.github.io/2019/02/11/E5-2670%E6%92%BF%E5%9E%83%E5%9C%BE%E5%BF%83%E5%BE%97/q8wp5F0.jpg">
+<meta property="og:image" content="https://hwei115j.github.io/2019/02/11/E5-2670%E6%92%BF%E5%9E%83%E5%9C%BE%E5%BF%83%E5%BE%97/wcKOXhq.jpg">
+<meta property="og:image" content="https://hwei115j.github.io/2019/02/11/E5-2670%E6%92%BF%E5%9E%83%E5%9C%BE%E5%BF%83%E5%BE%97/x7jDREc.jpg">
+<meta property="og:image" content="https://hwei115j.github.io/2019/02/11/E5-2670%E6%92%BF%E5%9E%83%E5%9C%BE%E5%BF%83%E5%BE%97/GwzJD7a.jpg">
+<meta property="og:image" content="https://hwei115j.github.io/2019/02/11/E5-2670%E6%92%BF%E5%9E%83%E5%9C%BE%E5%BF%83%E5%BE%97/qlQq4lq.jpg">
+<meta property="og:image" content="https://hwei115j.github.io/2019/02/11/E5-2670%E6%92%BF%E5%9E%83%E5%9C%BE%E5%BF%83%E5%BE%97/3KZxK9j.jpg">
+<meta property="og:image" content="https://hwei115j.github.io/2019/02/11/E5-2670%E6%92%BF%E5%9E%83%E5%9C%BE%E5%BF%83%E5%BE%97/zuEg9TI.jpg">
+<meta property="og:image" content="https://hwei115j.github.io/2019/02/11/E5-2670%E6%92%BF%E5%9E%83%E5%9C%BE%E5%BF%83%E5%BE%97/FNSoSiE.jpg">
+<meta property="og:image" content="https://hwei115j.github.io/2019/02/11/E5-2670%E6%92%BF%E5%9E%83%E5%9C%BE%E5%BF%83%E5%BE%97/0pMSVSG.jpg">
+<meta property="og:image" content="https://hwei115j.github.io/2019/02/11/E5-2670%E6%92%BF%E5%9E%83%E5%9C%BE%E5%BF%83%E5%BE%97/IKcHtjt.jpg">
+<meta property="og:image" content="https://hwei115j.github.io/2019/02/11/E5-2670%E6%92%BF%E5%9E%83%E5%9C%BE%E5%BF%83%E5%BE%97/DUDeYHK.jpg">
+<meta property="og:image" content="https://hwei115j.github.io/2019/02/11/E5-2670%E6%92%BF%E5%9E%83%E5%9C%BE%E5%BF%83%E5%BE%97/zry8au8.jpg">
+<meta property="og:image" content="https://hwei115j.github.io/2019/02/11/E5-2670%E6%92%BF%E5%9E%83%E5%9C%BE%E5%BF%83%E5%BE%97/c4Yxh3I.jpg">
+<meta property="og:image" content="https://hwei115j.github.io/2019/02/11/E5-2670%E6%92%BF%E5%9E%83%E5%9C%BE%E5%BF%83%E5%BE%97/vBndQN4.jpg">
+<meta property="og:image" content="https://hwei115j.github.io/2019/02/11/E5-2670%E6%92%BF%E5%9E%83%E5%9C%BE%E5%BF%83%E5%BE%97/G7Cc3Ji.jpg">
+<meta property="og:image" content="https://hwei115j.github.io/2019/02/11/E5-2670%E6%92%BF%E5%9E%83%E5%9C%BE%E5%BF%83%E5%BE%97/AYVuZbj.jpg">
+<meta property="og:image" content="https://hwei115j.github.io/2019/02/11/E5-2670%E6%92%BF%E5%9E%83%E5%9C%BE%E5%BF%83%E5%BE%97/pdazMqp.jpg">
+<meta property="article:published_time" content="2019-02-10T17:04:51.000Z">
+<meta property="article:modified_time" content="2023-04-27T17:33:35.765Z">
+<meta property="article:author" content="wei">
+<meta property="article:tag" content="開箱">
+<meta property="article:tag" content="電腦硬體">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://hwei115j.github.io/2019/02/11/E5-2670%E6%92%BF%E5%9E%83%E5%9C%BE%E5%BF%83%E5%BE%97/c4INgqo.jpg">
+
+<link rel="canonical" href="https://hwei115j.github.io/2019/02/11/E5-2670%E6%92%BF%E5%9E%83%E5%9C%BE%E5%BF%83%E5%BE%97/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-TW'
+  };
+</script>
+
+  <title>E5-2670撿垃圾心得 | wei's Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">wei's Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://hwei115j.github.io/2019/02/11/E5-2670%E6%92%BF%E5%9E%83%E5%9C%BE%E5%BF%83%E5%BE%97/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="wei">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="wei's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          E5-2670撿垃圾心得
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2019-02-11 01:04:51" itemprop="dateCreated datePublished" datetime="2019-02-11T01:04:51+08:00">2019-02-11</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新於</span>
+                <time title="修改時間：2023-04-28 01:33:35" itemprop="dateModified" datetime="2023-04-28T01:33:35+08:00">2023-04-28</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分類於</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E9%96%8B%E7%AE%B1/" itemprop="url" rel="index"><span itemprop="name">開箱</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="閱讀次數" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">閱讀次數：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus：</span>
+    
+    <a title="disqus" href="/2019/02/11/E5-2670%E6%92%BF%E5%9E%83%E5%9C%BE%E5%BF%83%E5%BE%97/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/02/11/E5-2670撿垃圾心得/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>原本只是想買一個散熱器，結果爬文的時候看到有人說e5-2670很便宜，查了一下，結果就買下去了，電腦當然不能只買主機，所以連螢幕也買了，買了這些之後，還差一 個鍵盤…..結果就沒錢啦QQ</p>
+<p>先說一下我的用途：上網、看影片，文書機就能滿足的需求<br>結果我的電腦：</p>
+<pre><code>CPU (中央處理器)：INTEL E5-2670 （8c16t)      
+MB (主機板)：HP z420 (拆機板） 
+RAM (記憶體)：ECC REG 8G*8 
+VGA (顯示卡)：沿用   
+HDD (硬碟)：INTEL 535 240G 
+PSU (電源供應器)：酷碼 CM G450W 80+ 結果不能用，所以沿用黑騎士300W 
+CHASSIS (機殼)：SAMA 極靜者(黑) 顯卡長41/風扇高17/SSD*3/讀卡機/ATX 
+MONITOR (螢幕)：Benq GW2760s
+</code></pre>
+<p> 用途：上網、看影片…..</p>
+<p>CPU真的頗大，不愧是2011腳位的</p>
+<img src="/2019/02/11/E5-2670%E6%92%BF%E5%9E%83%E5%9C%BE%E5%BF%83%E5%BE%97/c4INgqo.jpg" class="">
+<img src="/2019/02/11/E5-2670%E6%92%BF%E5%9E%83%E5%9C%BE%E5%BF%83%E5%BE%97/q8wp5F0.jpg" class="">
+
+<p>記憶體，因為是ECC REG的，一般電腦無法使用，所以在淘寶上很便宜，一條我買大概是 72RMB，我買了8條來插好插滿</p>
+<img src="/2019/02/11/E5-2670%E6%92%BF%E5%9E%83%E5%9C%BE%E5%BF%83%E5%BE%97/wcKOXhq.jpg" class="">
+<img src="/2019/02/11/E5-2670%E6%92%BF%E5%9E%83%E5%9C%BE%E5%BF%83%E5%BE%97/x7jDREc.jpg" class="">
+
+<p>骨牌倒了＠＠</p>
+<img src="/2019/02/11/E5-2670%E6%92%BF%E5%9E%83%E5%9C%BE%E5%BF%83%E5%BE%97/GwzJD7a.jpg" class="">
+
+<p>主機板HP-z420，工作站拆機主板，一開始賣家寄過來的時候問題很多ex:主板飛線，記憶體插槽3、4偵測不到記憶體，電感嘯叫，不斷重啟….，後來多花800元寄回中國，讓他換一張才解決（第二張成色真的比較好，連防塵蓋都比較高級，我懷疑賣家是故意寄次級品過來的…..)</p>
+<img src="/2019/02/11/E5-2670%E6%92%BF%E5%9E%83%E5%9C%BE%E5%BF%83%E5%BE%97/qlQq4lq.jpg" class="">
+<img src="/2019/02/11/E5-2670%E6%92%BF%E5%9E%83%E5%9C%BE%E5%BF%83%E5%BE%97/3KZxK9j.jpg" class="">
+<img src="/2019/02/11/E5-2670%E6%92%BF%E5%9E%83%E5%9C%BE%E5%BF%83%E5%BE%97/zuEg9TI.jpg" class="">
+
+<p>插上記憶體，插好插滿</p>
+<img src="/2019/02/11/E5-2670%E6%92%BF%E5%9E%83%E5%9C%BE%E5%BF%83%E5%BE%97/FNSoSiE.jpg" class="">
+
+<p>裝上CPU E5-2670</p>
+<img src="/2019/02/11/E5-2670%E6%92%BF%E5%9E%83%E5%9C%BE%E5%BF%83%E5%BE%97/0pMSVSG.jpg" class="">
+<img src="/2019/02/11/E5-2670%E6%92%BF%E5%9E%83%E5%9C%BE%E5%BF%83%E5%BE%97/IKcHtjt.jpg" class="">
+
+<p>上散熱膏和風扇～</p>
+<img src="/2019/02/11/E5-2670%E6%92%BF%E5%9E%83%E5%9C%BE%E5%BF%83%E5%BE%97/DUDeYHK.jpg" class="">
+<img src="/2019/02/11/E5-2670%E6%92%BF%E5%9E%83%E5%9C%BE%E5%BF%83%E5%BE%97/zry8au8.jpg" class="">
+
+<p>上機後(因為8條記憶體太燙了，所以在我想出利用64G的方法前，先封印4條再說）</p>
+<img src="/2019/02/11/E5-2670%E6%92%BF%E5%9E%83%E5%9C%BE%E5%BF%83%E5%BE%97/c4Yxh3I.jpg" class="">
+<img src="/2019/02/11/E5-2670%E6%92%BF%E5%9E%83%E5%9C%BE%E5%BF%83%E5%BE%97/vBndQN4.jpg" class="">
+<img src="/2019/02/11/E5-2670%E6%92%BF%E5%9E%83%E5%9C%BE%E5%BF%83%E5%BE%97/G7Cc3Ji.jpg" class="">
+<img src="/2019/02/11/E5-2670%E6%92%BF%E5%9E%83%E5%9C%BE%E5%BF%83%E5%BE%97/AYVuZbj.jpg" class="">
+<img src="/2019/02/11/E5-2670%E6%92%BF%E5%9E%83%E5%9C%BE%E5%BF%83%E5%BE%97/pdazMqp.jpg" class="">
+
+<p>裝好後，上ptt沒變比較快，反而是耗電大增，我現在電腦要關機了，以前都沒在關的，<br>重要零件都二手的，不知道什麼時候會BOOOOOOM！唯一的好處大概是…..</p>
+
+
+<p>潮爽Der</p>
+<p>P.S.主機板千萬不要買二手的，最會壞的前幾名就是它！！</p>
+<h2 id="後續"><a href="#後續" class="headerlink" title="後續"></a>後續</h2><p>其實這篇文我在2016時就寫了，當時剛退伍腦袋不清楚，除了這台電腦外也買了不少現在看來不太值得的東西，但不經一事不長一智，有些東西真的要付過學費才知道能買不能買</p>
+<p>現在把這篇老文章重新放在blog上，除了水文章外，也用來練習Markdown，希望以後可以寫的順一些</p>
+<p>另外這台電腦現在用起來還是有些小毛病，像是一條RAM掛了(只剩下56G惹QQ)、關機後開不太起來外(現在24h不關機)，用起來體驗還是不錯的，未來如果有機會(主機板掛了)也會試試看傳說中的中國寨板的～</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E9%96%8B%E7%AE%B1/" rel="tag"># 開箱</a>
+              <a href="/tags/%E9%9B%BB%E8%85%A6%E7%A1%AC%E9%AB%94/" rel="tag"># 電腦硬體</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2019/02/10/%E6%96%B0%E5%9C%B0%E5%9C%96/" rel="prev" title="新地圖">
+      <i class="fa fa-chevron-left"></i> 新地圖
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2019/02/11/%E7%B4%85%E7%B1%B3NOTE-4x%E6%8F%9B%E8%9E%A2%E5%B9%95-%E5%88%B7lineageos%E5%BF%83%E5%BE%97/" rel="next" title="紅米NOTE 4x換螢幕 + 刷lineageos心得">
+      紅米NOTE 4x換螢幕 + 刷lineageos心得 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    
+  <div class="comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+  </div>
+  
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BE%8C%E7%BA%8C"><span class="nav-number">1.</span> <span class="nav-text">後續</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">wei</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">9</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">標籤</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/hwei115j" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;hwei115j" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">wei</span>
+</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="訪客總數">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="總瀏覽次數">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+<script>
+  function loadCount() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://wei.disqus.com/count.js';
+    s.id = 'dsq-count-scr';
+    (d.head || d.body).appendChild(s);
+  }
+  // defer loading until the whole page loading is completed
+  window.addEventListener('load', loadCount, false);
+</script>
+<script>
+  var disqus_config = function() {
+    this.page.url = "https://hwei115j.github.io/2019/02/11/E5-2670%E6%92%BF%E5%9E%83%E5%9C%BE%E5%BF%83%E5%BE%97/";
+    this.page.identifier = "2019/02/11/E5-2670撿垃圾心得/";
+    this.page.title = "E5-2670撿垃圾心得";
+    };
+  NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
+    if (window.DISQUS) {
+      DISQUS.reset({
+        reload: true,
+        config: disqus_config
+      });
+    } else {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://wei.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', '' + +new Date());
+      (d.head || d.body).appendChild(s);
+    }
+  });
+</script>
+
+</body>
+</html>
