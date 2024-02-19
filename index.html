@@ -157,6 +157,758 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://hwei115j.github.io/2024/02/24/openwrt%E7%AD%86%E8%A8%98/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="wei">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="wei's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2024/02/24/openwrt%E7%AD%86%E8%A8%98/" class="post-title-link" itemprop="url">openwrt筆記</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2024-02-24 03:32:00" itemprop="dateCreated datePublished" datetime="2024-02-24T03:32:00+08:00">2024-02-24</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新於</span>
+                <time title="修改時間：2024-02-20 03:35:00" itemprop="dateModified" datetime="2024-02-20T03:35:00+08:00">2024-02-20</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分類於</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%AD%86%E8%A8%98/" itemprop="url" rel="index"><span itemprop="name">筆記</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus：</span>
+    
+    <a title="disqus" href="/2024/02/24/openwrt%E7%AD%86%E8%A8%98/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2024/02/24/openwrt筆記/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h1><ul>
+<li>便宜</li>
+<li>有線1gbps速度</li>
+<li>無線400mbps 以上</li>
+<li>pppoe硬撥</li>
+<li>pppoe穿透（讓後面的電腦可以pppoe撥號）</li>
+<li>openvpn server(?)</li>
+</ul>
+<h1 id="編譯"><a href="#編譯" class="headerlink" title="編譯"></a>編譯</h1><p>一開始使用<a target="_blank" rel="noopener" href="https://github.com/coolsnowwolf/lede">coolsnowwolf/lede</a>來編譯，可是發現wifi性能很差，只有25MB/s，經過排查，發現可能是開源驅動的問題<br>後來改用<a target="_blank" rel="noopener" href="https://github.com/openwrt/openwrt">openwrt主線</a>編譯，就一切正常</p>
+<h2 id="編譯環境"><a href="#編譯環境" class="headerlink" title="編譯環境"></a>編譯環境</h2><p>使用linux，配置安裝環境會容易很多（包管理器install就好）<br>參考官方教學</p>
+<h2 id="安裝luci"><a href="#安裝luci" class="headerlink" title="安裝luci"></a>安裝luci</h2><p>openwrt預設是沒有web ui的，需要安裝luci</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">./scripts/feeds update packages luci</span><br><span class="line">./scripts/feeds install -a -p luci</span><br></pre></td></tr></table></figure>
+
+<p>選擇要安裝的模組</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2024/02/24/openwrt%E7%AD%86%E8%A8%98/#more" rel="contents">
+                閱讀全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://hwei115j.github.io/2023/01/25/%E5%88%86%E4%BA%AB%E9%9B%BB%E8%85%A6%E6%A1%8C/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="wei">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="wei's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/01/25/%E5%88%86%E4%BA%AB%E9%9B%BB%E8%85%A6%E6%A1%8C/" class="post-title-link" itemprop="url">分享電腦桌</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2023-01-25 01:20:07" itemprop="dateCreated datePublished" datetime="2023-01-25T01:20:07+08:00">2023-01-25</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新於</span>
+                <time title="修改時間：2024-02-20 03:33:52" itemprop="dateModified" datetime="2024-02-20T03:33:52+08:00">2024-02-20</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分類於</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%97%A5%E5%B8%B8/" itemprop="url" rel="index"><span itemprop="name">日常</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus：</span>
+    
+    <a title="disqus" href="/2023/01/25/%E5%88%86%E4%BA%AB%E9%9B%BB%E8%85%A6%E6%A1%8C/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2023/01/25/分享電腦桌/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>如題</p>
+<p>其實去年年初就搞好了<br>本來想說上來分享一下 可是一拖就是一年 拖延症末期惹QQ</p>
+<p>先上個圖</p>
+<p>全景<br><img src="/2023/01/25/%E5%88%86%E4%BA%AB%E9%9B%BB%E8%85%A6%E6%A1%8C/NBOfBak.jpg"></p>
+<p>主桌<br><img src="/2023/01/25/%E5%88%86%E4%BA%AB%E9%9B%BB%E8%85%A6%E6%A1%8C/nF15Rsa.jpg"></p>
+<p>側桌<br><img src="/2023/01/25/%E5%88%86%E4%BA%AB%E9%9B%BB%E8%85%A6%E6%A1%8C/UDkFzNX.jpg"></p>
+<p>放電腦的地方（還有乖乖，和買來吃灰的健身環）<br><img src="/2023/01/25/%E5%88%86%E4%BA%AB%E9%9B%BB%E8%85%A6%E6%A1%8C/o8NI0l9.jpg"></p>
+<p>當初規劃的時候考量的點如下：</p>
+<ul>
+<li><p>下面空間要大 可以把椅子推進去</p>
+</li>
+<li><p>抽屜要可以移動 不會卡到椅子</p>
+</li>
+<li><p>要兩個桌面 這樣可以同時做兩件事 不會影響用電腦</p>
+</li>
+<li><p>可以方便拆卸搬運 並且不會過度依賴同一個房間格局</p>
+</li>
+<li><p>便宜</p>
+</li>
+</ul>
+<p>最後桌子分成三部份：</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2023/01/25/%E5%88%86%E4%BA%AB%E9%9B%BB%E8%85%A6%E6%A1%8C/#more" rel="contents">
+                閱讀全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://hwei115j.github.io/2022/10/18/G604%E5%A4%A7%E9%83%A8%E5%88%86%E8%A7%A3%E7%B5%90%E5%90%88_%E6%8F%9B%E5%BE%AE%E5%8B%95/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="wei">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="wei's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/10/18/G604%E5%A4%A7%E9%83%A8%E5%88%86%E8%A7%A3%E7%B5%90%E5%90%88_%E6%8F%9B%E5%BE%AE%E5%8B%95/" class="post-title-link" itemprop="url">G604大部分解結合 換微動</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2022-10-18 01:20:07" itemprop="dateCreated datePublished" datetime="2022-10-18T01:20:07+08:00">2022-10-18</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新於</span>
+                <time title="修改時間：2024-02-20 03:33:38" itemprop="dateModified" datetime="2024-02-20T03:33:38+08:00">2024-02-20</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分類於</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/DIY/" itemprop="url" rel="index"><span itemprop="name">DIY</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus：</span>
+    
+    <a title="disqus" href="/2022/10/18/G604%E5%A4%A7%E9%83%A8%E5%88%86%E8%A7%A3%E7%B5%90%E5%90%88_%E6%8F%9B%E5%BE%AE%E5%8B%95/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2022/10/18/G604大部分解結合_換微動/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>如題</p>
+<p>因為羅技原廠的中國產歐姆龍太廢 一直連點<br>加上之前不知道買什麼微動，所以也買了一大包中國歐姆龍<br>所以朋友+我的（朋友送保固後舊滑鼠）G604 一共拆了四次<br>每次拆都有點忘記怎麼拆<br>之後大概也要繼續拆 就乾脆寫一篇文章當筆記用<br>也幫助其他需要拆G604的人（因為真的有點難拆= =）</p>
+<p>朋友的G604 保內第二次連點 最後懶的送保，就給我換微動<br><img src="/2022/10/18/G604%E5%A4%A7%E9%83%A8%E5%88%86%E8%A7%A3%E7%B5%90%E5%90%88_%E6%8F%9B%E5%BE%AE%E5%8B%95/5qSDMqx.jpg"></p>
+<p>翻到背面，螺絲在腳墊底下<br>用吹風機加熱軟化背膠，再用美工刀把腳墊挑起來<br>需要注意 他的鐵氟龍層很容易分離，變成兩層 美工刀要盡量從更底下插入<br><img src="/2022/10/18/G604%E5%A4%A7%E9%83%A8%E5%88%86%E8%A7%A3%E7%B5%90%E5%90%88_%E6%8F%9B%E5%BE%AE%E5%8B%95/VEKlPsf.jpg"></p>
+<p>腳墊拿下來後要把他貼平 不然受熱後冷卻，他會整個彎曲，黏不回去<br>我建議在紙上面黏雙面膠<br>使用表皮滑滑的地方 讓腳墊能平貼上去 又不會黏在紙上拔不下來<br><img src="/2022/10/18/G604%E5%A4%A7%E9%83%A8%E5%88%86%E8%A7%A3%E7%B5%90%E5%90%88_%E6%8F%9B%E5%BE%AE%E5%8B%95/MJ8vps9.jpg"></p>
+<p>把螺絲卸下來 有簡單的卡扣 用指甲可以撬開來<br>裡面有一條排線 和電池倉電源線 拔掉即可分解上下<br>螺絲是粗長螺絲<br><img src="/2022/10/18/G604%E5%A4%A7%E9%83%A8%E5%88%86%E8%A7%A3%E7%B5%90%E5%90%88_%E6%8F%9B%E5%BE%AE%E5%8B%95/Td9N1DB.jpg"></p>
+<p>把電池倉螺絲卸下來<br>螺絲是細長螺絲<br><img src="/2022/10/18/G604%E5%A4%A7%E9%83%A8%E5%88%86%E8%A7%A3%E7%B5%90%E5%90%88_%E6%8F%9B%E5%BE%AE%E5%8B%95/hexgprf.jpg"></p>
+<p>把看到的螺絲都卸下來<br>不過這兩顆是側邊螺絲，換微動不用拆<br><img src="/2022/10/18/G604%E5%A4%A7%E9%83%A8%E5%88%86%E8%A7%A3%E7%B5%90%E5%90%88_%E6%8F%9B%E5%BE%AE%E5%8B%95/1Ho0xq0.jpg"></p>
+<p>主要都是細長螺絲<br><img src="/2022/10/18/G604%E5%A4%A7%E9%83%A8%E5%88%86%E8%A7%A3%E7%B5%90%E5%90%88_%E6%8F%9B%E5%BE%AE%E5%8B%95/RiUjVn3.jpg"></p>
+<p>不過這兩顆是 扁螺絲<br><img src="/2022/10/18/G604%E5%A4%A7%E9%83%A8%E5%88%86%E8%A7%A3%E7%B5%90%E5%90%88_%E6%8F%9B%E5%BE%AE%E5%8B%95/kVgnnp2.jpg"></p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/10/18/G604%E5%A4%A7%E9%83%A8%E5%88%86%E8%A7%A3%E7%B5%90%E5%90%88_%E6%8F%9B%E5%BE%AE%E5%8B%95/#more" rel="contents">
+                閱讀全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://hwei115j.github.io/2022/04/19/DSLogic_U2Basic%E6%94%B9Plus/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="wei">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="wei's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/04/19/DSLogic_U2Basic%E6%94%B9Plus/" class="post-title-link" itemprop="url">DSLogic U2Basic改Plus</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2022-04-19 01:20:07" itemprop="dateCreated datePublished" datetime="2022-04-19T01:20:07+08:00">2022-04-19</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新於</span>
+                <time title="修改時間：2024-02-20 03:34:02" itemprop="dateModified" datetime="2024-02-20T03:34:02+08:00">2024-02-20</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分類於</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/DIY/" itemprop="url" rel="index"><span itemprop="name">DIY</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus：</span>
+    
+    <a title="disqus" href="/2022/04/19/DSLogic_U2Basic%E6%94%B9Plus/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2022/04/19/DSLogic_U2Basic改Plus/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>如題</p>
+<p>之前買了DSLogic U2Basic #1Y4oHnTH (Electronics)<br><a target="_blank" rel="noopener" href="https://www.ptt.cc/bbs/Electronics/M.1645421681.A.751.html">https://www.ptt.cc/bbs/Electronics/M.1645421681.A.751.html</a></p>
+<p>雖然規格提升很多，但用的其實不多<br>一方面是還是比較多低速訊號，用之前那個就夠用了，而且體積小很多<br>另一方面是他的APP用的不是很習慣，還是比較習慣PluseView</p>
+<p>最近比較有空，而且材料也放一段時間了<br>就來把DSLogic U2Basic改成Plus</p>
+<p><img src="/2022/04/19/DSLogic_U2Basic%E6%94%B9Plus/iknEyJT.png"></p>
+<p>（規格對照）</p>
+<p>主要參考這兩篇文章、影片<br><a target="_blank" rel="noopener" href="https://habr.com/ru/post/483496/">Превращаем DSLogic U2Basic в DSLogic Plus</a><br><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV19r4y1F7Mb/">新版DSLogic U2 Basic硬改升级为DSLogic Plus教程</a></p>
+<p>基本都寫的很完整了<br>我放幾張圖發篇廢文就好(x</p>
+<p><img src="/2022/04/19/DSLogic_U2Basic%E6%94%B9Plus/rwPtkbM.jpg"></p>
+<p>拆開來的PCB板，要修改EEPROM、FPGA、SDRAM<br>SDRAM我買的是美光的MT48LC16M16A2</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/04/19/DSLogic_U2Basic%E6%94%B9Plus/#more" rel="contents">
+                閱讀全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://hwei115j.github.io/2022/02/21/DSLogic_U2Basic%E9%82%8F%E8%BC%AF%E5%88%86%E6%9E%90%E5%84%80%E9%96%8B%E7%AE%B1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="wei">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="wei's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/02/21/DSLogic_U2Basic%E9%82%8F%E8%BC%AF%E5%88%86%E6%9E%90%E5%84%80%E9%96%8B%E7%AE%B1/" class="post-title-link" itemprop="url">DSLogic U2Basic邏輯分析儀開箱</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2022-02-21 01:20:07" itemprop="dateCreated datePublished" datetime="2022-02-21T01:20:07+08:00">2022-02-21</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新於</span>
+                <time title="修改時間：2024-02-20 03:37:11" itemprop="dateModified" datetime="2024-02-20T03:37:11+08:00">2024-02-20</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分類於</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E9%96%8B%E7%AE%B1/" itemprop="url" rel="index"><span itemprop="name">開箱</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus：</span>
+    
+    <a title="disqus" href="/2022/02/21/DSLogic_U2Basic%E9%82%8F%E8%BC%AF%E5%88%86%E6%9E%90%E5%84%80%E9%96%8B%E7%AE%B1/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2022/02/21/DSLogic_U2Basic邏輯分析儀開箱/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>最近工作需要測量SPI訊號</p>
+<p>根據夏農定理之類的東東，取樣率至少需要被測訊號的兩倍以上才能正確採樣<br>20幾Mhz的速度，我手上最大取樣率24Mhz的便宜邏輯分析儀根本沒辦法用<br><img src="/2022/02/21/DSLogic_U2Basic%E9%82%8F%E8%BC%AF%E5%88%86%E6%9E%90%E5%84%80%E9%96%8B%E7%AE%B1/oTgBKjH.jpg"></p>
+<p>公司的孕龍到是可以用<br>不過他的測量點只有128k，在100M下時間太短，無法測完整個訊號<br>雖然可以用壓縮來延長時間，但他的壓縮不知道為什麼沒辦法用<br>加上UI我不習慣</p>
+<p>我習慣用開源的PulseView，他雖然支援孕龍，但我不知道他怎麼用壓縮</p>
+<p>想說以後我可能會很常碰32bit的SoC，就想買一個邏輯分析儀，自己用起來也比較順手</p>
+<p>需求如下：</p>
+<ul>
+<li>取樣率100M</li>
+<li>能用PulseView（習慣）</li>
+<li>便宜（窮）</li>
+<li>希望有type-c（都2022年了，不用type-c實在說不過去）</li>
+</ul>
+<p>所以就選了夢源實驗室的DSLogic U2Basic<br><img src="/2022/02/21/DSLogic_U2Basic%E9%82%8F%E8%BC%AF%E5%88%86%E6%9E%90%E5%84%80%E9%96%8B%E7%AE%B1/iknEyJT.png"></p>
+<p>他只要1300多台幣<br>除了滿足需求外，他的宣傳還有「開源」兩個字<br>你知道的，寫軟體的對這兩個字實在沒有抵抗力(x)</p>
+<p><img src="/2022/02/21/DSLogic_U2Basic%E9%82%8F%E8%BC%AF%E5%88%86%E6%9E%90%E5%84%80%E9%96%8B%E7%AE%B1/n0xhddZ.jpg"></p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/02/21/DSLogic_U2Basic%E9%82%8F%E8%BC%AF%E5%88%86%E6%9E%90%E5%84%80%E9%96%8B%E7%AE%B1/#more" rel="contents">
+                閱讀全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://hwei115j.github.io/2021/11/30/%E9%85%B7%E6%AF%94%E9%AD%94%E6%96%B9iplay20%E5%88%B7GSI%E9%9F%8C%E9%AB%94%E5%BF%83%E5%BE%97/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="wei">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="wei's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/11/30/%E9%85%B7%E6%AF%94%E9%AD%94%E6%96%B9iplay20%E5%88%B7GSI%E9%9F%8C%E9%AB%94%E5%BF%83%E5%BE%97/" class="post-title-link" itemprop="url">酷比魔方iplay20刷GSI韌體心得</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2021-11-30 01:20:07" itemprop="dateCreated datePublished" datetime="2021-11-30T01:20:07+08:00">2021-11-30</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新於</span>
+                <time title="修改時間：2024-02-20 03:33:46" itemprop="dateModified" datetime="2024-02-20T03:33:46+08:00">2024-02-20</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分類於</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/DIY/" itemprop="url" rel="index"><span itemprop="name">DIY</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus：</span>
+    
+    <a title="disqus" href="/2021/11/30/%E9%85%B7%E6%AF%94%E9%AD%94%E6%96%B9iplay20%E5%88%B7GSI%E9%9F%8C%E9%AB%94%E5%BF%83%E5%BE%97/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2021/11/30/酷比魔方iplay20刷GSI韌體心得/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>當初看上這台便宜平板的螢幕，花了3000大洋買了下來<br>經過了半年，事實證明我的選擇沒錯<br>全貼合IPS螢幕、大猩猩玻璃、足夠長的續航力<br>就算性能普普，平時用來看看影片、漫畫、PDF也綽綽有餘</p>
+<p>不過卻有一個小小的缺點，那就是耳機輸出<br>低音異常的多，聽任何東西都糊成一團，根本無法使用<br>更新到最新、刷韌體、root等等方法都試過，卻沒有一點改善<br>想刷第三方韌體，卻也因為這個機器小眾，沒有人提供韌體而作罷<br>當然也是有解決方法，使用藍芽，或是買一個便宜的type-c轉3.5mm轉接線都能輕鬆解決，但總歸有些遺憾</p>
+<p>之後過了數個月，我在網路上閒逛時，無意間發現了一個神奇的東東，GSI（通用系統映像）<br>在android 8之前，如果要刷機，那就要需要有完整的android，裡面會包含了硬體廠商的驅動程式，而通常硬體廠商把驅動看作商業機密，是不太願意放出來的，所以只好仰賴各路大神各顯神通，而小眾的機器基本上就沒有辦法了<br>而android 8的時候google開發了一個新技術 Project Treble，這個新技術簡單來說就是把驅動和系統分離，理論上來說，使用這個技術後，不用動到底層的驅動，就能刷入新的系統</p>
+<p>而我這台平板出廠時的韌體版本是android 10的，自然是支援這項技術<br>經過一番搜尋後，還真被我找到了！<br>第一篇是原始教學，第二篇是原始教學的補充<br>因為寫的蠻詳細的，所以我就不贅述了，只說一些我遇到的問題，做個原始教學補充的補充(?</p>
+<p><a target="_blank" rel="noopener" href="https://www.51cube.com/forums/topic/10812/">【iPlay20】T1011S_刷GSI(通用镜像)</a><br><a target="_blank" rel="noopener" href="https://www.bilibili.com/read/cv9406647">让你的板子吃上crDroid，iPlay20刷写通用系统镜像(GSI)/面具FAQ</a></p>
+<ol>
+<li>要刷陸版韌體（國際版無法刷入GSI，原因不明）</li>
+<li>理論上來說GSI也可以直接升級版本，但實際上刷android 11會掛掉，進不去系統</li>
+<li>雖然有很多韌體可以選擇看起來很美好，但實際上只能刷AOSP的韌體。為什麼？因為只有他有內建GAPPS，而其他系統是要另外刷進去的，而這個方法只能刷入系統本身，如果要刷其他東西，就需要移植一個recovery，但這種冷門硬體根本不會有人人理你:P</li>
+<li>如果刷壞了，只能拆機拔電池。不過只要會拔電池，就不怕刷壞</li>
+</ol>
+<p>要注意的應該就這樣<br>最後我刷了AOSP後，耳機問題終於解決了，聲音終於正常了</p>
+<p>剛剛看到我的筆記軟體裡面躺了這篇文章，我大概八月就弄好了</p>
+<p>文章十月才完成…..然後發出來又拖了兩個月 拖延症末期了Orz</p>
+
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/11/30/%E9%85%B7%E6%AF%94%E9%AD%94%E6%96%B9iplay20%E5%88%B7GSI%E9%9F%8C%E9%AB%94%E5%BF%83%E5%BE%97/#more" rel="contents">
+                閱讀全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://hwei115j.github.io/2021/11/29/%E5%9C%9F%E7%A0%B2_%E4%BF%AE%E5%BE%A9%E9%9B%A3%E7%94%A8%E7%9A%84%E5%B0%8F%E7%B4%85%E9%BB%9E/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="wei">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="wei's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/11/29/%E5%9C%9F%E7%A0%B2_%E4%BF%AE%E5%BE%A9%E9%9B%A3%E7%94%A8%E7%9A%84%E5%B0%8F%E7%B4%85%E9%BB%9E/" class="post-title-link" itemprop="url">土砲 修復難用的小紅點</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2021-11-29 01:20:07" itemprop="dateCreated datePublished" datetime="2021-11-29T01:20:07+08:00">2021-11-29</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新於</span>
+                <time title="修改時間：2024-02-20 03:33:49" itemprop="dateModified" datetime="2024-02-20T03:33:49+08:00">2024-02-20</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分類於</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/DIY/" itemprop="url" rel="index"><span itemprop="name">DIY</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus：</span>
+    
+    <a title="disqus" href="/2021/11/29/%E5%9C%9F%E7%A0%B2_%E4%BF%AE%E5%BE%A9%E9%9B%A3%E7%94%A8%E7%9A%84%E5%B0%8F%E7%B4%85%E9%BB%9E/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2021/11/29/土砲_修復難用的小紅點/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>自從把手上的x220換成t480s<br>最讓我不習慣的就是那個廢到笑的新版小紅點<br>為了輕薄強行縮短小紅點的高度，導致小紅點慢到無法接受<br>前面幾天我甚至要開著觸控板來應對長距離的移動<br>這樣要小紅點幹嘛啊？(怒</p>
+<p>不過最後還是找到解法，那就是墊高小紅點讓力矩變長，這樣速度會快很多<br>當然這只是土砲的方案，如果用3D列印出一個底部更厚的小紅點，效果應該會更好</p>
+<p>原廠小紅點高度比鍵盤低一點點<br><img src="/2021/11/29/%E5%9C%9F%E7%A0%B2_%E4%BF%AE%E5%BE%A9%E9%9B%A3%E7%94%A8%E7%9A%84%E5%B0%8F%E7%B4%85%E9%BB%9E/8vLGLvk.jpg"></p>
+<p>拔掉後結構長這樣，現在的小紅點都是這種細細的柱子<br><img src="/2021/11/29/%E5%9C%9F%E7%A0%B2_%E4%BF%AE%E5%BE%A9%E9%9B%A3%E7%94%A8%E7%9A%84%E5%B0%8F%E7%B4%85%E9%BB%9E/vDQ3R51.jpg"></p>
+<p>找一個小小的東西塞進去中間的孔(最好有彈性，這樣壓進去後才會平均)<br><img src="/2021/11/29/%E5%9C%9F%E7%A0%B2_%E4%BF%AE%E5%BE%A9%E9%9B%A3%E7%94%A8%E7%9A%84%E5%B0%8F%E7%B4%85%E9%BB%9E/vjSp8YS.jpg"></p>
+<p><img src="/2021/11/29/%E5%9C%9F%E7%A0%B2_%E4%BF%AE%E5%BE%A9%E9%9B%A3%E7%94%A8%E7%9A%84%E5%B0%8F%E7%B4%85%E9%BB%9E/TacPSmL.jpg"></p>
+<p>然後蓋回去，讓小紅點墊高一毫米左右，會和鍵盤切齊(或是凸出一點點)<br>這樣力矩變長，操作起來會敏感很多(穩定性會稍微下降，不過我感覺問題不大）<br><img src="/2021/11/29/%E5%9C%9F%E7%A0%B2_%E4%BF%AE%E5%BE%A9%E9%9B%A3%E7%94%A8%E7%9A%84%E5%B0%8F%E7%B4%85%E9%BB%9E/r5CDi55.jpg"></p>
+<p>目前用他工作了一個多月，感覺真的好很多，可以完全不用滑鼠的程度</p>
+
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/11/29/%E5%9C%9F%E7%A0%B2_%E4%BF%AE%E5%BE%A9%E9%9B%A3%E7%94%A8%E7%9A%84%E5%B0%8F%E7%B4%85%E9%BB%9E/#more" rel="contents">
+                閱讀全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
     <link itemprop="mainEntityOfPage" href="https://hwei115j.github.io/2021/08/23/%E8%87%AA%E8%A3%BD%E3%80%8CEzlink%E3%80%8D%E9%9A%A8%E8%BA%AB%E7%A2%9F/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -188,7 +940,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新於</span>
-                <time title="修改時間：2023-04-28 01:33:36" itemprop="dateModified" datetime="2023-04-28T01:33:36+08:00">2023-04-28</time>
+                <time title="修改時間：2024-02-20 03:08:56" itemprop="dateModified" datetime="2024-02-20T03:08:56+08:00">2024-02-20</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -196,7 +948,7 @@
               </span>
               <span class="post-meta-item-text">分類於</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%AD%86%E8%A8%98/" itemprop="url" rel="index"><span itemprop="name">筆記</span></a>
+                  <a href="/categories/DIY/" itemprop="url" rel="index"><span itemprop="name">DIY</span></a>
                 </span>
             </span>
 
@@ -462,625 +1214,11 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="https://hwei115j.github.io/2019/04/23/%E5%88%A9%E7%94%A8Gutentags%E5%92%8Cctags%E9%96%B1%E8%AE%80%E7%A8%8B%E5%BC%8F%E7%A2%BC/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="wei">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="wei's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/04/23/%E5%88%A9%E7%94%A8Gutentags%E5%92%8Cctags%E9%96%B1%E8%AE%80%E7%A8%8B%E5%BC%8F%E7%A2%BC/" class="post-title-link" itemprop="url">利用Gutentags和ctags閱讀程式碼</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">發表於</span>
-
-              <time title="創建時間：2019-04-23 10:37:27" itemprop="dateCreated datePublished" datetime="2019-04-23T10:37:27+08:00">2019-04-23</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新於</span>
-                <time title="修改時間：2023-04-28 01:33:35" itemprop="dateModified" datetime="2023-04-28T01:33:35+08:00">2023-04-28</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分類於</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%AD%86%E8%A8%98/" itemprop="url" rel="index"><span itemprop="name">筆記</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus：</span>
-    
-    <a title="disqus" href="/2019/04/23/%E5%88%A9%E7%94%A8Gutentags%E5%92%8Cctags%E9%96%B1%E8%AE%80%E7%A8%8B%E5%BC%8F%E7%A2%BC/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/04/23/利用Gutentags和ctags閱讀程式碼/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>因為閱讀code，如果沒有可以查詢定義的功能的話，會很不方便，加上使用vim，所以之前就參考<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/36279445">這裡</a>來設定<br>但不知道為何，在我的桌機上一直沒辦法正常運作(win10)<br>因為很麻煩，放棄了一段時間，又因為要用到，所以又重新繼續搞</p>
-<h2 id="設定"><a href="#設定" class="headerlink" title="設定"></a>設定</h2><p>發現之前搞錯了一些東西<br>首先能動的一直是ctags(gtags&amp;gtags-cscope界面太難用了….)<br>我以前一直以為我用的是gtags但其實是ctags…..</p>
-<p>所以一開始就沒有用到gutentags_plus這個插件的功能<br>用的只有<code>vim-gutentags</code><br>這是一個可以在vim8上，在後台執行tags更新的插件</p>
-<p>他的設定</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">let g:gutentags_modules = [&#x27;ctags&#x27;, &#x27;gtags_cscope&#x27;]</span><br><span class="line">let g:gutentags_project_root = [&#x27;.root&#x27;, &#x27;.git&#x27;]</span><br><span class="line">let g:gutentags_cache_dir = expand(&#x27;~/.cache/tags&#x27;)</span><br></pre></td></tr></table></figure>
-
-<p>意思是說會在打開的目錄向上搜尋，直到遇到<code>.root</code>或<code>.git</code>，然後在<code>~/.cache/tags</code>建立ctags和gtags的tag檔</p>
-<p>因為只要用到ctags所以改成<br><code>let g:gutentags_modules = [&#39;ctags&#39;]</code><br>就只會建立ctags檔了</p>
-<p>照理來說，此時只要打開專案裡的原始檔，此插件就會自動產生tags擋了，然後自動設定ctags<br>就能用&lt;C-]&gt; &lt;C-t&gt;在程式碼之間跳轉了<br>但我發現，在win10的wsl和msys2環境裡，在<code>~/.cache/tags</code>裡的tags檔會呈現</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2019/04/23/%E5%88%A9%E7%94%A8Gutentags%E5%92%8Cctags%E9%96%B1%E8%AE%80%E7%A8%8B%E5%BC%8F%E7%A2%BC/#more" rel="contents">
-                閱讀全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="https://hwei115j.github.io/2019/02/12/%E7%94%A8rclone%E7%9A%84%E7%AD%86%E8%A8%98/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="wei">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="wei's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/02/12/%E7%94%A8rclone%E7%9A%84%E7%AD%86%E8%A8%98/" class="post-title-link" itemprop="url">用rclone的筆記</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">發表於</span>
-
-              <time title="創建時間：2019-02-12 01:20:07" itemprop="dateCreated datePublished" datetime="2019-02-12T01:20:07+08:00">2019-02-12</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新於</span>
-                <time title="修改時間：2023-04-28 01:33:35" itemprop="dateModified" datetime="2023-04-28T01:33:35+08:00">2023-04-28</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分類於</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%AD%86%E8%A8%98/" itemprop="url" rel="index"><span itemprop="name">筆記</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus：</span>
-    
-    <a title="disqus" href="/2019/02/12/%E7%94%A8rclone%E7%9A%84%E7%AD%86%E8%A8%98/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/02/12/用rclone的筆記/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>還是記個筆記吧</p>
-<p>暑假時用的rclone，寒假就全忘光了….<br>雖然有存當初的網址，但重新掌握還是需要時間<br>加上這次學了不少新東西，還是記個筆記比較實在…</p>
-<h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><pre><code>    rclone 動作 來源地址 目標地址 flag
-</code></pre>
-<h2 id="常用動作"><a href="#常用動作" class="headerlink" title="常用動作"></a>常用動作</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">config  (設定)</span><br><span class="line">ls      (列出目錄與子目錄底下全部的元素)</span><br><span class="line">lsd     (只列出目錄底下的元素)</span><br><span class="line">copy    (複製，略過已經複製過的)</span><br><span class="line">sync    (同步，以來源為準，目標少的會複製、多的會刪除)</span><br><span class="line">來源位置&amp;目標位置可為 本機位置 或 遠端位置</span><br></pre></td></tr></table></figure>
-<p>flag常用的有</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">-v</span><br><span class="line">（顯示完整資訊，想要顯示進度要有這項）</span><br><span class="line">--bwlimit xxxxK/M/G</span><br><span class="line">（限制上傳速度，後面是單位可為K/M/G，例如：--bwlimit 8000k)</span><br><span class="line">--checksum</span><br><span class="line">（上傳時做完整檢查，以確保來源與目標完全相同(<span class="built_in">hash</span>?)，需要注意的是，過程中硬碟會不停的讀取且速度會降低）</span><br><span class="line">--size-only</span><br><span class="line">（上傳時只比對檔案的大小，相對checksum快，但可能有錯）</span><br><span class="line">--dry-run</span><br><span class="line">（試跑一次，看看會對目標做什麼變動）</span><br><span class="line">--transfers int</span><br><span class="line">(一次傳送多少個檔案，預設為4)</span><br></pre></td></tr></table></figure>
-<p>範例</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2019/02/12/%E7%94%A8rclone%E7%9A%84%E7%AD%86%E8%A8%98/#more" rel="contents">
-                閱讀全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="https://hwei115j.github.io/2019/02/11/Micron-BX500-240G-%E9%96%8B%E7%AE%B1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="wei">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="wei's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/02/11/Micron-BX500-240G-%E9%96%8B%E7%AE%B1/" class="post-title-link" itemprop="url">Micron BX500 240G 開箱</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">發表於</span>
-
-              <time title="創建時間：2019-02-11 19:51:47" itemprop="dateCreated datePublished" datetime="2019-02-11T19:51:47+08:00">2019-02-11</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新於</span>
-                <time title="修改時間：2023-04-28 01:33:35" itemprop="dateModified" datetime="2023-04-28T01:33:35+08:00">2023-04-28</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分類於</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E9%96%8B%E7%AE%B1/" itemprop="url" rel="index"><span itemprop="name">開箱</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus：</span>
-    
-    <a title="disqus" href="/2019/02/11/Micron-BX500-240G-%E9%96%8B%E7%AE%B1/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/02/11/Micron-BX500-240G-開箱/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>昨天看到原價屋有一塊SSD好便宜的<br>雖然沒有很需要新的SSD<br>但當我打開測試軟體來測我的Ezlink之後</p>
-
-<img src="/2019/02/11/Micron-BX500-240G-%E9%96%8B%E7%AE%B1/B4IbalW.jpg" class>
-
-<p>我就去買了新的SSD</p>
-<img src="/2019/02/11/Micron-BX500-240G-%E9%96%8B%E7%AE%B1/FyjjHU0.jpg" class>
-
-<p>打開來就一張說明書&amp;本體</p>
-<img src="/2019/02/11/Micron-BX500-240G-%E9%96%8B%E7%AE%B1/zmBO0xj.jpg" class>
-
-<p>本體長這樣</p>
-<img src="/2019/02/11/Micron-BX500-240G-%E9%96%8B%E7%AE%B1/i41qs6t.jpg" class>
-
-<h2 id="拆解＆上機"><a href="#拆解＆上機" class="headerlink" title="拆解＆上機"></a>拆解＆上機</h2>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2019/02/11/Micron-BX500-240G-%E9%96%8B%E7%AE%B1/#more" rel="contents">
-                閱讀全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="https://hwei115j.github.io/2019/02/11/%E7%B4%85%E7%B1%B3NOTE-4x%E6%8F%9B%E8%9E%A2%E5%B9%95-%E5%88%B7lineageos%E5%BF%83%E5%BE%97/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="wei">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="wei's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/02/11/%E7%B4%85%E7%B1%B3NOTE-4x%E6%8F%9B%E8%9E%A2%E5%B9%95-%E5%88%B7lineageos%E5%BF%83%E5%BE%97/" class="post-title-link" itemprop="url">紅米NOTE 4x換螢幕 + 刷lineageos心得</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">發表於</span>
-
-              <time title="創建時間：2019-02-11 02:08:46" itemprop="dateCreated datePublished" datetime="2019-02-11T02:08:46+08:00">2019-02-11</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新於</span>
-                <time title="修改時間：2023-04-28 01:33:35" itemprop="dateModified" datetime="2023-04-28T01:33:35+08:00">2023-04-28</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分類於</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%B6%AD%E4%BF%AE/" itemprop="url" rel="index"><span itemprop="name">維修</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus：</span>
-    
-    <a title="disqus" href="/2019/02/11/%E7%B4%85%E7%B1%B3NOTE-4x%E6%8F%9B%E8%9E%A2%E5%B9%95-%E5%88%B7lineageos%E5%BF%83%E5%BE%97/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/02/11/紅米NOTE-4x換螢幕-刷lineageos心得/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>前幾天買了一隻便宜的NOTE 4x<br>但是螢幕有問題<br>在某些情況下有垂直紅線<br>有迷之水平線條(? 懷疑是排線問題</p>
-<p>拆開來後，調整了排線，顯示有一定程度的緩解<br>但是下方功能鍵不能用了，奇怪的是，打開螢幕觸控顯示，發現手機有偵測到電容按鈕的觸發，但顯示觸發在螢幕最下方所以想說乾脆換一個螢幕</p>
-<p>我本來想把我亂拆一通的手機拿去聯強維修點讓他幫我換螢幕(13XX)，但過去後發現連假休息，星期一才開，但我到星期四才有空，於是就去淘寶上找了….</p>
-<p>淘寶上有很多便宜的螢幕，大約3XX元就有了，但稍微查一下資料後發現，這水很深，好像很多都不是原廠的螢幕，後來也不知道怎麼找，所以就買了有發安裝影片的店家，加運費大概花了900</p>
-<p>順便買了保護套&amp;保護貼，一起送過來，結果總共花了1100元</p>
-<h2 id="螢幕"><a href="#螢幕" class="headerlink" title="螢幕"></a>螢幕</h2><p>原本長這樣</p>
-<img src="/2019/02/11/%E7%B4%85%E7%B1%B3NOTE-4x%E6%8F%9B%E8%9E%A2%E5%B9%95-%E5%88%B7lineageos%E5%BF%83%E5%BE%97/uO7RGxt.jpg" class>
-<img src="/2019/02/11/%E7%B4%85%E7%B1%B3NOTE-4x%E6%8F%9B%E8%9E%A2%E5%B9%95-%E5%88%B7lineageos%E5%BF%83%E5%BE%97/MkbPHOg.jpg" class>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2019/02/11/%E7%B4%85%E7%B1%B3NOTE-4x%E6%8F%9B%E8%9E%A2%E5%B9%95-%E5%88%B7lineageos%E5%BF%83%E5%BE%97/#more" rel="contents">
-                閱讀全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="https://hwei115j.github.io/2019/02/11/E5-2670%E6%92%BF%E5%9E%83%E5%9C%BE%E5%BF%83%E5%BE%97/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="wei">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="wei's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/02/11/E5-2670%E6%92%BF%E5%9E%83%E5%9C%BE%E5%BF%83%E5%BE%97/" class="post-title-link" itemprop="url">E5-2670撿垃圾心得</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">發表於</span>
-
-              <time title="創建時間：2019-02-11 01:04:51" itemprop="dateCreated datePublished" datetime="2019-02-11T01:04:51+08:00">2019-02-11</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新於</span>
-                <time title="修改時間：2023-04-28 01:33:35" itemprop="dateModified" datetime="2023-04-28T01:33:35+08:00">2023-04-28</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分類於</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E9%96%8B%E7%AE%B1/" itemprop="url" rel="index"><span itemprop="name">開箱</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus：</span>
-    
-    <a title="disqus" href="/2019/02/11/E5-2670%E6%92%BF%E5%9E%83%E5%9C%BE%E5%BF%83%E5%BE%97/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/02/11/E5-2670撿垃圾心得/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>原本只是想買一個散熱器，結果爬文的時候看到有人說e5-2670很便宜，查了一下，結果就買下去了，電腦當然不能只買主機，所以連螢幕也買了，買了這些之後，還差一 個鍵盤…..結果就沒錢啦QQ</p>
-<p>先說一下我的用途：上網、看影片，文書機就能滿足的需求<br>結果我的電腦：</p>
-<pre><code>CPU (中央處理器)：INTEL E5-2670 （8c16t)      
-MB (主機板)：HP z420 (拆機板） 
-RAM (記憶體)：ECC REG 8G*8 
-VGA (顯示卡)：沿用   
-HDD (硬碟)：INTEL 535 240G 
-PSU (電源供應器)：酷碼 CM G450W 80+ 結果不能用，所以沿用黑騎士300W 
-CHASSIS (機殼)：SAMA 極靜者(黑) 顯卡長41/風扇高17/SSD*3/讀卡機/ATX 
-MONITOR (螢幕)：Benq GW2760s
-</code></pre>
-<p> 用途：上網、看影片…..</p>
-<p>CPU真的頗大，不愧是2011腳位的</p>
-<img src="/2019/02/11/E5-2670%E6%92%BF%E5%9E%83%E5%9C%BE%E5%BF%83%E5%BE%97/c4INgqo.jpg" class>
-<img src="/2019/02/11/E5-2670%E6%92%BF%E5%9E%83%E5%9C%BE%E5%BF%83%E5%BE%97/q8wp5F0.jpg" class>
-
-<p>記憶體，因為是ECC REG的，一般電腦無法使用，所以在淘寶上很便宜，一條我買大概是 72RMB，我買了8條來插好插滿</p>
-<img src="/2019/02/11/E5-2670%E6%92%BF%E5%9E%83%E5%9C%BE%E5%BF%83%E5%BE%97/wcKOXhq.jpg" class>
-<img src="/2019/02/11/E5-2670%E6%92%BF%E5%9E%83%E5%9C%BE%E5%BF%83%E5%BE%97/x7jDREc.jpg" class>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2019/02/11/E5-2670%E6%92%BF%E5%9E%83%E5%9C%BE%E5%BF%83%E5%BE%97/#more" rel="contents">
-                閱讀全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="https://hwei115j.github.io/2019/02/10/%E6%96%B0%E5%9C%B0%E5%9C%96/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="wei">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="wei's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/02/10/%E6%96%B0%E5%9C%B0%E5%9C%96/" class="post-title-link" itemprop="url">新地圖</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">發表於</span>
-
-              <time title="創建時間：2019-02-10 20:11:10" itemprop="dateCreated datePublished" datetime="2019-02-10T20:11:10+08:00">2019-02-10</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新於</span>
-                <time title="修改時間：2023-04-28 01:33:35" itemprop="dateModified" datetime="2023-04-28T01:33:35+08:00">2023-04-28</time>
-              </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus：</span>
-    
-    <a title="disqus" href="/2019/02/10/%E6%96%B0%E5%9C%B0%E5%9C%96/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/02/10/新地圖/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>雖然之前也有寫過blog但後來都荒廢了<br>剛好新的一年新氣象，就開個新地圖八</p>
-<p>這個blog是使用hexo技術架在github page上的，雖然一年前友人曾推薦給我過，但當時我並沒有接觸過github，只覺得「蛤，架個blog還要學這麼多東西阿～」所以就沒有使用，改用其他blog服務了<br>在這一年間稍稍接觸過github，再回過頭來看，發覺這樣的組合實在是方便又簡單，也難怪當初友人會如此推薦！</p>
-<p>這裡基本上算是我個人的筆記，但看看之前放棄的紀錄<br>也只能說是希望了<br>如果能堅持把文章寫的多些就好了…..</p>
-
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2019/02/10/%E6%96%B0%E5%9C%B0%E5%9C%96/#more" rel="contents">
-                閱讀全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一頁"></i></a>
+  </nav>
 
 
 
@@ -1145,20 +1283,20 @@ MONITOR (螢幕)：Benq GW2760s
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">9</span>
+          <span class="site-state-item-count">16</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">5</span>
         <span class="site-state-item-name">分類</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-count">30</span>
         <span class="site-state-item-name">標籤</span></a>
       </div>
   </nav>
