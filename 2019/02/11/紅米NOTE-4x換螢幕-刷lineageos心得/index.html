@@ -31,12 +31,12 @@
     var CONFIG = {"hostname":"hwei115j.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="前言前幾天買了一隻便宜的NOTE 4x但是螢幕有問題在某些情況下有垂直紅線有迷之水平線條(? 懷疑是排線問題 拆開來後，調整了排線，顯示有一定程度的緩解但是下方功能鍵不能用了，奇怪的是，打開螢幕觸控顯示，發現手機有偵測到電容按鈕的觸發，但顯示觸發在螢幕最下方所以想說乾脆換一個螢幕 我本來想把我亂拆一通的手機拿去聯強維修點讓他幫我換螢幕(13XX)，但過去後發現連假休息，星期一才開，但我到星期四才有">
+  <meta name="description" content="前言 前幾天買了一隻便宜的NOTE 4x 但是螢幕有問題 在某些情況下有垂直紅線 有迷之水平線條(? 懷疑是排線問題 拆開來後，調整了排線，顯示有一定程度的緩解 但是下方功能鍵不能用了，奇怪的是，打開螢幕觸控顯示，發現手機有偵測到電容按鈕的觸發，但顯示觸發在螢幕最下方所以想說乾脆換一個螢幕 我本來想把我亂拆一通的手機拿去聯強維修點讓他幫我換螢幕(13XX)，但過去後發現連假休息，星期一才開，但我到">
 <meta property="og:type" content="article">
 <meta property="og:title" content="紅米NOTE 4x換螢幕 + 刷lineageos心得">
 <meta property="og:url" content="https://hwei115j.github.io/2019/02/11/%E7%B4%85%E7%B1%B3NOTE-4x%E6%8F%9B%E8%9E%A2%E5%B9%95-%E5%88%B7lineageos%E5%BF%83%E5%BE%97/index.html">
 <meta property="og:site_name" content="wei&#39;s Blog">
-<meta property="og:description" content="前言前幾天買了一隻便宜的NOTE 4x但是螢幕有問題在某些情況下有垂直紅線有迷之水平線條(? 懷疑是排線問題 拆開來後，調整了排線，顯示有一定程度的緩解但是下方功能鍵不能用了，奇怪的是，打開螢幕觸控顯示，發現手機有偵測到電容按鈕的觸發，但顯示觸發在螢幕最下方所以想說乾脆換一個螢幕 我本來想把我亂拆一通的手機拿去聯強維修點讓他幫我換螢幕(13XX)，但過去後發現連假休息，星期一才開，但我到星期四才有">
+<meta property="og:description" content="前言 前幾天買了一隻便宜的NOTE 4x 但是螢幕有問題 在某些情況下有垂直紅線 有迷之水平線條(? 懷疑是排線問題 拆開來後，調整了排線，顯示有一定程度的緩解 但是下方功能鍵不能用了，奇怪的是，打開螢幕觸控顯示，發現手機有偵測到電容按鈕的觸發，但顯示觸發在螢幕最下方所以想說乾脆換一個螢幕 我本來想把我亂拆一通的手機拿去聯強維修點讓他幫我換螢幕(13XX)，但過去後發現連假休息，星期一才開，但我到">
 <meta property="og:locale" content="zh_TW">
 <meta property="og:image" content="https://hwei115j.github.io/2019/02/11/%E7%B4%85%E7%B1%B3NOTE-4x%E6%8F%9B%E8%9E%A2%E5%B9%95-%E5%88%B7lineageos%E5%BF%83%E5%BE%97/uO7RGxt.jpg">
 <meta property="og:image" content="https://hwei115j.github.io/2019/02/11/%E7%B4%85%E7%B1%B3NOTE-4x%E6%8F%9B%E8%9E%A2%E5%B9%95-%E5%88%B7lineageos%E5%BF%83%E5%BE%97/MkbPHOg.jpg">
@@ -52,8 +52,8 @@
 <meta property="article:published_time" content="2019-02-10T18:08:46.000Z">
 <meta property="article:modified_time" content="2023-04-27T17:33:35.956Z">
 <meta property="article:author" content="wei">
-<meta property="article:tag" content="筆記">
 <meta property="article:tag" content="拆解">
+<meta property="article:tag" content="筆記">
 <meta property="article:tag" content="手機">
 <meta property="article:tag" content="動手">
 <meta name="twitter:card" content="summary">
@@ -261,76 +261,90 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>前幾天買了一隻便宜的NOTE 4x<br>但是螢幕有問題<br>在某些情況下有垂直紅線<br>有迷之水平線條(? 懷疑是排線問題</p>
-<p>拆開來後，調整了排線，顯示有一定程度的緩解<br>但是下方功能鍵不能用了，奇怪的是，打開螢幕觸控顯示，發現手機有偵測到電容按鈕的觸發，但顯示觸發在螢幕最下方所以想說乾脆換一個螢幕</p>
-<p>我本來想把我亂拆一通的手機拿去聯強維修點讓他幫我換螢幕(13XX)，但過去後發現連假休息，星期一才開，但我到星期四才有空，於是就去淘寶上找了….</p>
+        <h2 id="前言">前言</h2>
+<p>前幾天買了一隻便宜的NOTE 4x<br>
+但是螢幕有問題<br>
+在某些情況下有垂直紅線<br>
+有迷之水平線條(? 懷疑是排線問題</p>
+<p>拆開來後，調整了排線，顯示有一定程度的緩解<br>
+但是下方功能鍵不能用了，奇怪的是，打開螢幕觸控顯示，發現手機有偵測到電容按鈕的觸發，但顯示觸發在螢幕最下方所以想說乾脆換一個螢幕</p>
+<p>我本來想把我亂拆一通的手機拿去聯強維修點讓他幫我換螢幕(13XX)，但過去後發現連假休息，星期一才開，但我到星期四才有空，於是就去淘寶上找了…</p>
 <p>淘寶上有很多便宜的螢幕，大約3XX元就有了，但稍微查一下資料後發現，這水很深，好像很多都不是原廠的螢幕，後來也不知道怎麼找，所以就買了有發安裝影片的店家，加運費大概花了900</p>
 <p>順便買了保護套&amp;保護貼，一起送過來，結果總共花了1100元</p>
-<h2 id="螢幕"><a href="#螢幕" class="headerlink" title="螢幕"></a>螢幕</h2><p>原本長這樣</p>
+<h2 id="螢幕">螢幕</h2>
+<p>原本長這樣</p>
 <img src="/2019/02/11/%E7%B4%85%E7%B1%B3NOTE-4x%E6%8F%9B%E8%9E%A2%E5%B9%95-%E5%88%B7lineageos%E5%BF%83%E5%BE%97/uO7RGxt.jpg" class="">
 <img src="/2019/02/11/%E7%B4%85%E7%B1%B3NOTE-4x%E6%8F%9B%E8%9E%A2%E5%B9%95-%E5%88%B7lineageos%E5%BF%83%E5%BE%97/MkbPHOg.jpg" class="">
-
-<p>有不明線條(但奇怪的是刷lineage後就沒有線條了…)<br>而且下方功能鍵無法觸控(但奇怪的是電容按鈕有感測到，但觸控點卻是在螢幕最下方)</p>
+<p>有不明線條(但奇怪的是刷lineage後就沒有線條了…)<br>
+而且下方功能鍵無法觸控(但奇怪的是電容按鈕有感測到，但觸控點卻是在螢幕最下方)</p>
 <p>新螢幕(左)</p>
 <img src="/2019/02/11/%E7%B4%85%E7%B1%B3NOTE-4x%E6%8F%9B%E8%9E%A2%E5%B9%95-%E5%88%B7lineageos%E5%BF%83%E5%BE%97/lqzW6fM.jpg" class="">
-
 <p>拆開背板(很好拆，先把SIM卡槽取下，再用卡片把背板的卡準撬開)</p>
 <img src="/2019/02/11/%E7%B4%85%E7%B1%B3NOTE-4x%E6%8F%9B%E8%9E%A2%E5%B9%95-%E5%88%B7lineageos%E5%BF%83%E5%BE%97/m9Rdcdv.jpg" class="">
-
 <p>拆開背板後</p>
 <img src="/2019/02/11/%E7%B4%85%E7%B1%B3NOTE-4x%E6%8F%9B%E8%9E%A2%E5%B9%95-%E5%88%B7lineageos%E5%BF%83%E5%BE%97/83JiXCf.jpg" class="">
-
 <p>指紋辨識器用膠黏在上面，不過很容易就能取下，下面還有一顆螺絲，所以一定要拆</p>
 <img src="/2019/02/11/%E7%B4%85%E7%B1%B3NOTE-4x%E6%8F%9B%E8%9E%A2%E5%B9%95-%E5%88%B7lineageos%E5%BF%83%E5%BE%97/E9DAsnE.jpg" class="">
-
-<p>把螺絲鬆開後就能拆開，過上面和下面各有一塊塑膠的東東，有卡準，所以也要用卡片撬<br>開</p>
+<p>把螺絲鬆開後就能拆開，過上面和下面各有一塊塑膠的東東，有卡準，所以也要用卡片撬<br>
+開</p>
 <img src="/2019/02/11/%E7%B4%85%E7%B1%B3NOTE-4x%E6%8F%9B%E8%9E%A2%E5%B9%95-%E5%88%B7lineageos%E5%BF%83%E5%BE%97/qOORL55.jpg" class="">
-
 <p>螺絲有分銀色和黑色的，黑色又分長短兩種，銀色螺絲只有四個，鎖在手機的四個角，黑色短的是鎖在主機板上，黑色長的是鎖在塑膠上(塑膠在主機板上,所以是一次鎖兩層的)</p>
 <img src="/2019/02/11/%E7%B4%85%E7%B1%B3NOTE-4x%E6%8F%9B%E8%9E%A2%E5%B9%95-%E5%88%B7lineageos%E5%BF%83%E5%BE%97/qOORL55.jpg" class="">
-
 <p>然後組裝起來就好(網路上有很多詳細的教學，我這個只是騙P幣的而已)</p>
 <img src="/2019/02/11/%E7%B4%85%E7%B1%B3NOTE-4x%E6%8F%9B%E8%9E%A2%E5%B9%95-%E5%88%B7lineageos%E5%BF%83%E5%BE%97/jB6VgsW.jpg" class="">
-
-<p>先試用…..恩，正常</p>
+<p>先試用…恩，正常</p>
 <img src="/2019/02/11/%E7%B4%85%E7%B1%B3NOTE-4x%E6%8F%9B%E8%9E%A2%E5%B9%95-%E5%88%B7lineageos%E5%BF%83%E5%BE%97/HQ8R7Y5.jpg" class="">
-
-<h2 id="刷lineageOS"><a href="#刷lineageOS" class="headerlink" title="刷lineageOS"></a>刷lineageOS</h2><p>因為小米的UI用不習慣，所以刷成用過一段時間的lineageOS</p>
+<h2 id="刷lineageOS">刷lineageOS</h2>
+<p>因為小米的UI用不習慣，所以刷成用過一段時間的lineageOS</p>
 <p>先說說原理</p>
 <img src="/2019/02/11/%E7%B4%85%E7%B1%B3NOTE-4x%E6%8F%9B%E8%9E%A2%E5%B9%95-%E5%88%B7lineageos%E5%BF%83%E5%BE%97/CvCUlDo.png" class="">
-
 <p>最底下是硬體，上面的是Bootloader(類似BIOS)再上面則是recovery和作業系統</p>
-<p>要做的就是進入Bootloader，然後刷入第三方recovery(功能較多)，然後再藉由recovery的幫助，把作業系統刷入，當然，直接在Bootloader下把作業系統刷進去也是可以，不過會比較麻煩….</p>
+<p>要做的就是進入Bootloader，然後刷入第三方recovery(功能較多)，然後再藉由recovery的幫助，把作業系統刷入，當然，直接在Bootloader下把作業系統刷進去也是可以，不過會比較麻煩…</p>
 <p>不過各家廠商為了不讓使用者自行修改作業系統，所以會把Bootloader鎖定，讓使用者不能在Bootloader下修改recovery或作業系統，所以就需要去「解鎖」，但各家廠商解鎖的方法不一</p>
 <p>而小米這家廠商，只要去官網申請便能得到解鎖軟體和解鎖序號，同時還能享受保固</p>
 <blockquote>
-<p>解鎖網址:<br><a target="_blank" rel="noopener" href="http://www.miui.com/unlock/index.html">http://www.miui.com/unlock/index.html</a></p>
+<p>解鎖網址:<br>
+<a target="_blank" rel="noopener" href="http://www.miui.com/unlock/index.html">http://www.miui.com/unlock/index.html</a></p>
 </blockquote>
-<p>所以就去申請了，結果他說要在設備上登入72小時才能解鎖，我:….好吧就等八<br>然後我先刷入第三方recovery TWRP，教學在官網其實都有</p>
+<p>所以就去申請了，結果他說要在設備上登入72小時才能解鎖，我:…好吧就等八<br>
+然後我先刷入第三方recovery TWRP，教學在官網其實都有</p>
 <blockquote>
-<p>教學&amp;下載網址:<br><a target="_blank" rel="noopener" href="https://twrp.me/devices/xiaomiredminote4.html">https://twrp.me/devices/xiaomiredminote4.html</a></p>
+<p>教學&amp;下載網址:<br>
+<a target="_blank" rel="noopener" href="https://twrp.me/devices/xiaomiredminote4.html">https://twrp.me/devices/xiaomiredminote4.html</a></p>
 </blockquote>
 <p>然後再進去TWRP 刷入作業系統 lineageOS，一樣詳細的教學官網都有</p>
 <blockquote>
-<p>教學&amp;下載網址<br><a target="_blank" rel="noopener" href="https://wiki.lineageos.org/devices/mido/install">https://wiki.lineageos.org/devices/mido/install</a><br><a target="_blank" rel="noopener" href="https://download.lineageos.org/mido">https://download.lineageos.org/mido</a></p>
+<p>教學&amp;下載網址<br>
+<a target="_blank" rel="noopener" href="https://wiki.lineageos.org/devices/mido/install">https://wiki.lineageos.org/devices/mido/install</a><br>
+<a target="_blank" rel="noopener" href="https://download.lineageos.org/mido">https://download.lineageos.org/mido</a></p>
 </blockquote>
 <p>但是lineageOS是沒有Google服務框架的，也就是說play商店，youtube之類的都沒有所以我們還要把GApps刷入，刷入方式也很簡單，再TWRP下用install就能安裝了，不過要選擇CPU架構，有ARM ARM64 X86 X86_64，如果不知道自己的CPU是什麼架構的，把自己的CPU型號丟上Google上，87%可以找到</p>
 <blockquote>
-<p>教學&amp;下載網址<br><a target="_blank" rel="noopener" href="http://opengapps.org/">http://opengapps.org/</a></p>
+<p>教學&amp;下載網址<br>
+<a target="_blank" rel="noopener" href="http://opengapps.org/">http://opengapps.org/</a></p>
 </blockquote>
-<h2 id="結尾"><a href="#結尾" class="headerlink" title="結尾"></a>結尾</h2><p>想說P幣騙得差不多了，也懶得寫了(X)</p>
+<h2 id="結尾">結尾</h2>
+<p>想說P幣騙得差不多了，也懶得寫了(X)</p>
 <p>因為我之前的手機也有刷機，所以就用鈦備份把之前的手機上的app備份到新手機上，然後把介面設的一模一樣，沒錯，連我愛用的ZenUI也一起移過去了，所以我就在小米的手機上用華碩的介面，美中不足的是華碩相機無法移植(誤</p>
 <p>從Zenfone Selfie S616換成紅米 NOTE4X S625的升級感非常明顯，S625的性能比起S616有了很大提升，製程的進步，讓手機的耗電和發熱更低，加上NOTE 4x的4100mAh電池讓我用到現在都還沒沒電過，還有指紋解鎖&amp;紅外線萬能遙控器功能也非常好用</p>
-<p>不過也有缺點，首先是相機…..真的是很爛，光線充足的情況放大會變油畫，光線不足的情況下，雜訊會很多，不過我也不常拍照，實際對我的影響還好，還有沒有NFC，這讓我莫名地有種失落感，不過對於一個原價5K左右的手機這樣也算超值了</p>
-<p>插曲1:<br>其實我在第一篇文的時候，有板友送我螢幕，讓我非常感動，臨表涕泣，不知所云然後忘記檢查，結果他送我的是NOTE4，和我的NOTE4X不合QQ，於是我徵求他的意見後在隔壁板送掉了(不過定價從原本的1NT變成60NT，這就是所謂的暴利八XD)</p>
-<p>插曲2:<br>買螢幕後才發現有人自己換螢幕後無法刷lineageOS(驅動問題)，嚇得我一身冷汗，還好換上去後可以正常使用，不過在TWRP下無法觸控，原因不明，還好我在換螢幕前就刷好機了，還有功能鍵的燈也沒亮(不知是我安裝的問題還是螢幕的問題)，不過我也沒打算開燈，所以沒什麼影響</p>
-<p>插曲3:<br>我知道NOTE4X在中國有標配版和高配版，而台灣只有賣標配版，所以我在選手機殼時我有注意這個細節，不過最後送來的手機殼中，三個只有一個是標配版的殼，所以我當時到底嗑了什麼….</p>
-<p>插曲4:<br>買殼有送玻璃貼，貼上去後(一次成功)，用了30秒就撕下來了，原因是觸控不良，後來才知道玻璃貼除非是用UV膠貼的，不然都會有觸控問題，笨點在於，我以前貼玻璃貼再拆下來這樣循環做了至少四次</p>
-<h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><blockquote>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/luoshengyang/article/details/29688041">https://blog.csdn.net/luoshengyang/article/details/29688041</a><br><a target="_blank" rel="noopener" href="http://zwindr.blogspot.tw/2017/05/lineageos-note-4x.html">http://zwindr.blogspot.tw/2017/05/lineageos-note-4x.html</a><br>各種軟體官方網站</p>
+<p>不過也有缺點，首先是相機…真的是很爛，光線充足的情況放大會變油畫，光線不足的情況下，雜訊會很多，不過我也不常拍照，實際對我的影響還好，還有沒有NFC，這讓我莫名地有種失落感，不過對於一個原價5K左右的手機這樣也算超值了</p>
+<p>插曲1:<br>
+其實我在第一篇文的時候，有板友送我螢幕，讓我非常感動，臨表涕泣，不知所云然後忘記檢查，結果他送我的是NOTE4，和我的NOTE4X不合QQ，於是我徵求他的意見後在隔壁板送掉了(不過定價從原本的1NT變成60NT，這就是所謂的暴利八XD)</p>
+<p>插曲2:<br>
+買螢幕後才發現有人自己換螢幕後無法刷lineageOS(驅動問題)，嚇得我一身冷汗，還好換上去後可以正常使用，不過在TWRP下無法觸控，原因不明，還好我在換螢幕前就刷好機了，還有功能鍵的燈也沒亮(不知是我安裝的問題還是螢幕的問題)，不過我也沒打算開燈，所以沒什麼影響</p>
+<p>插曲3:<br>
+我知道NOTE4X在中國有標配版和高配版，而台灣只有賣標配版，所以我在選手機殼時我有注意這個細節，不過最後送來的手機殼中，三個只有一個是標配版的殼，所以我當時到底嗑了什麼…</p>
+<p>插曲4:<br>
+買殼有送玻璃貼，貼上去後(一次成功)，用了30秒就撕下來了，原因是觸控不良，後來才知道玻璃貼除非是用UV膠貼的，不然都會有觸控問題，笨點在於，我以前貼玻璃貼再拆下來這樣循環做了至少四次</p>
+<h2 id="參考資料">參考資料</h2>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/luoshengyang/article/details/29688041">https://blog.csdn.net/luoshengyang/article/details/29688041</a><br>
+<a target="_blank" rel="noopener" href="http://zwindr.blogspot.tw/2017/05/lineageos-note-4x.html">http://zwindr.blogspot.tw/2017/05/lineageos-note-4x.html</a><br>
+各種軟體官方網站</p>
 </blockquote>
 <p>大概4這樣</p>
-<h2 id="後續"><a href="#後續" class="headerlink" title="後續"></a>後續</h2><p>這篇一樣是以前就寫的在PTT上的，現在把他重新轉到blog上</p>
+<h2 id="後續">後續</h2>
+<p>這篇一樣是以前就寫的在PTT上的，現在把他重新轉到blog上</p>
 <p>現在也換了新手機(zenfone 5)，這隻給我阿嬤用了</p>
 <p>當初自己換說真的不是什麼好決定，不是說我安裝時出了什麼紕漏，而是說淘寶上的手機螢幕水實在很深，不知識真是假，這個螢幕會有很微妙的觸控不靈(說微妙意思是，你會懷疑是否為心理因素)，而且短短時間中居然出現亮點，品質實在擔憂</p>
 <p>能花1200NT就能換原廠螢幕，何樂不為？</p>
@@ -343,8 +357,8 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/%E7%AD%86%E8%A8%98/" rel="tag"># 筆記</a>
               <a href="/tags/%E6%8B%86%E8%A7%A3/" rel="tag"># 拆解</a>
+              <a href="/tags/%E7%AD%86%E8%A8%98/" rel="tag"># 筆記</a>
               <a href="/tags/%E6%89%8B%E6%A9%9F/" rel="tag"># 手機</a>
               <a href="/tags/%E5%8B%95%E6%89%8B/" rel="tag"># 動手</a>
           </div>

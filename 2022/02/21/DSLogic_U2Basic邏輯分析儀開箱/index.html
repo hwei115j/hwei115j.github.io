@@ -31,12 +31,12 @@
     var CONFIG = {"hostname":"hwei115j.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="最近工作需要測量SPI訊號 根據夏農定理之類的東東，取樣率至少需要被測訊號的兩倍以上才能正確採樣20幾Mhz的速度，我手上最大取樣率24Mhz的便宜邏輯分析儀根本沒辦法用 公司的孕龍到是可以用不過他的測量點只有128k，在100M下時間太短，無法測完整個訊號雖然可以用壓縮來延長時間，但他的壓縮不知道為什麼沒辦法用加上UI我不習慣 我習慣用開源的PulseView，他雖然支援孕龍，但我不知道他怎麼用">
+  <meta name="description" content="最近工作需要測量SPI訊號 根據夏農定理之類的東東，取樣率至少需要被測訊號的兩倍以上才能正確採樣 20幾Mhz的速度，我手上最大取樣率24Mhz的便宜邏輯分析儀根本沒辦法用  公司的孕龍到是可以用 不過他的測量點只有128k，在100M下時間太短，無法測完整個訊號 雖然可以用壓縮來延長時間，但他的壓縮不知道為什麼沒辦法用 加上UI我不習慣 我習慣用開源的PulseView，他雖然支援孕龍，但我不知">
 <meta property="og:type" content="article">
 <meta property="og:title" content="DSLogic U2Basic邏輯分析儀開箱">
 <meta property="og:url" content="https://hwei115j.github.io/2022/02/21/DSLogic_U2Basic%E9%82%8F%E8%BC%AF%E5%88%86%E6%9E%90%E5%84%80%E9%96%8B%E7%AE%B1/index.html">
 <meta property="og:site_name" content="wei&#39;s Blog">
-<meta property="og:description" content="最近工作需要測量SPI訊號 根據夏農定理之類的東東，取樣率至少需要被測訊號的兩倍以上才能正確採樣20幾Mhz的速度，我手上最大取樣率24Mhz的便宜邏輯分析儀根本沒辦法用 公司的孕龍到是可以用不過他的測量點只有128k，在100M下時間太短，無法測完整個訊號雖然可以用壓縮來延長時間，但他的壓縮不知道為什麼沒辦法用加上UI我不習慣 我習慣用開源的PulseView，他雖然支援孕龍，但我不知道他怎麼用">
+<meta property="og:description" content="最近工作需要測量SPI訊號 根據夏農定理之類的東東，取樣率至少需要被測訊號的兩倍以上才能正確採樣 20幾Mhz的速度，我手上最大取樣率24Mhz的便宜邏輯分析儀根本沒辦法用  公司的孕龍到是可以用 不過他的測量點只有128k，在100M下時間太短，無法測完整個訊號 雖然可以用壓縮來延長時間，但他的壓縮不知道為什麼沒辦法用 加上UI我不習慣 我習慣用開源的PulseView，他雖然支援孕龍，但我不知">
 <meta property="og:locale" content="zh_TW">
 <meta property="og:image" content="https://hwei115j.github.io/2022/02/21/DSLogic_U2Basic%E9%82%8F%E8%BC%AF%E5%88%86%E6%9E%90%E5%84%80%E9%96%8B%E7%AE%B1/oTgBKjH.jpg">
 <meta property="og:image" content="https://hwei115j.github.io/2022/02/21/DSLogic_U2Basic%E9%82%8F%E8%BC%AF%E5%88%86%E6%9E%90%E5%84%80%E9%96%8B%E7%AE%B1/iknEyJT.png">
@@ -257,8 +257,13 @@
 
       
         <p>最近工作需要測量SPI訊號</p>
-<p>根據夏農定理之類的東東，取樣率至少需要被測訊號的兩倍以上才能正確採樣<br>20幾Mhz的速度，我手上最大取樣率24Mhz的便宜邏輯分析儀根本沒辦法用<br><img src="/2022/02/21/DSLogic_U2Basic%E9%82%8F%E8%BC%AF%E5%88%86%E6%9E%90%E5%84%80%E9%96%8B%E7%AE%B1/oTgBKjH.jpg"></p>
-<p>公司的孕龍到是可以用<br>不過他的測量點只有128k，在100M下時間太短，無法測完整個訊號<br>雖然可以用壓縮來延長時間，但他的壓縮不知道為什麼沒辦法用<br>加上UI我不習慣</p>
+<p>根據夏農定理之類的東東，取樣率至少需要被測訊號的兩倍以上才能正確採樣<br>
+20幾Mhz的速度，我手上最大取樣率24Mhz的便宜邏輯分析儀根本沒辦法用<br>
+<img src="/2022/02/21/DSLogic_U2Basic%E9%82%8F%E8%BC%AF%E5%88%86%E6%9E%90%E5%84%80%E9%96%8B%E7%AE%B1/oTgBKjH.jpg" alt=""></p>
+<p>公司的孕龍到是可以用<br>
+不過他的測量點只有128k，在100M下時間太短，無法測完整個訊號<br>
+雖然可以用壓縮來延長時間，但他的壓縮不知道為什麼沒辦法用<br>
+加上UI我不習慣</p>
 <p>我習慣用開源的PulseView，他雖然支援孕龍，但我不知道他怎麼用壓縮</p>
 <p>想說以後我可能會很常碰32bit的SoC，就想買一個邏輯分析儀，自己用起來也比較順手</p>
 <p>需求如下：</p>
@@ -268,20 +273,32 @@
 <li>便宜（窮）</li>
 <li>希望有type-c（都2022年了，不用type-c實在說不過去）</li>
 </ul>
-<p>所以就選了夢源實驗室的DSLogic U2Basic<br><img src="/2022/02/21/DSLogic_U2Basic%E9%82%8F%E8%BC%AF%E5%88%86%E6%9E%90%E5%84%80%E9%96%8B%E7%AE%B1/iknEyJT.png"></p>
-<p>他只要1300多台幣<br>除了滿足需求外，他的宣傳還有「開源」兩個字<br>你知道的，寫軟體的對這兩個字實在沒有抵抗力(x)</p>
-<p><img src="/2022/02/21/DSLogic_U2Basic%E9%82%8F%E8%BC%AF%E5%88%86%E6%9E%90%E5%84%80%E9%96%8B%E7%AE%B1/n0xhddZ.jpg"></p>
+<p>所以就選了夢源實驗室的DSLogic U2Basic<br>
+<img src="/2022/02/21/DSLogic_U2Basic%E9%82%8F%E8%BC%AF%E5%88%86%E6%9E%90%E5%84%80%E9%96%8B%E7%AE%B1/iknEyJT.png" alt=""></p>
+<p>他只要1300多台幣<br>
+除了滿足需求外，他的宣傳還有「開源」兩個字<br>
+你知道的，寫軟體的對這兩個字實在沒有抵抗力(x)</p>
+<p><img src="/2022/02/21/DSLogic_U2Basic%E9%82%8F%E8%BC%AF%E5%88%86%E6%9E%90%E5%84%80%E9%96%8B%E7%AE%B1/n0xhddZ.jpg" alt=""></p>
 <p>外觀就是一個紙箱子</p>
-<p><img src="/2022/02/21/DSLogic_U2Basic%E9%82%8F%E8%BC%AF%E5%88%86%E6%9E%90%E5%84%80%E9%96%8B%E7%AE%B1/SWgXR4G.jpg"></p>
+<p><img src="/2022/02/21/DSLogic_U2Basic%E9%82%8F%E8%BC%AF%E5%88%86%E6%9E%90%E5%84%80%E9%96%8B%E7%AE%B1/SWgXR4G.jpg" alt=""></p>
 <p>由左自右分別為說明書、本體、type-c線、杜邦線、測試夾</p>
-<p><img src="/2022/02/21/DSLogic_U2Basic%E9%82%8F%E8%BC%AF%E5%88%86%E6%9E%90%E5%84%80%E9%96%8B%E7%AE%B1/gr0a4SY.jpg"></p>
-<p>插上電腦的樣子，他用的接頭不是一般的2.54mm的頭，而是比較細的頭<br>有一個轉接線，線好像是鍍銀線，比較硬，每四條訊號就有一個接地線</p>
-<p>不過之後打開PulseView後卻發現抓不到設備<br>看了一下wiki發現<br><img src="/2022/02/21/DSLogic_U2Basic%E9%82%8F%E8%BC%AF%E5%88%86%E6%9E%90%E5%84%80%E9%96%8B%E7%AE%B1/74kjTZy.png"></p>
-<p>沒想到居然還沒支援….<br>可能是他比較新，是取代Basic的產品，所以現在PulseView還沒支援</p>
-<p>只好去官網下載夢源實驗室他們的軟體<br><img src="/2022/02/21/DSLogic_U2Basic%E9%82%8F%E8%BC%AF%E5%88%86%E6%9E%90%E5%84%80%E9%96%8B%E7%AE%B1/SFejjUE.png"></p>
-<p>接上訊號後，能正確測量SPI訊號，而且有解析協議<br>可是……UI還是不怎麼習慣 (′･ω･`)</p>
-<p>不過沒關係<br><a target="_blank" rel="noopener" href="https://habr.com/ru/post/483496/">俄羅斯人破解了U2Basic</a>，縮只要換上一個256M的SDRAM，飛一根線，再改一下韌體，就能升級成Plus版<br>（原來Basic只要換RAM+改韌體就可以升級，U2改了電路板）</p>
-<p>Plus是被PulseView官方支援的<br><img src="/2022/02/21/DSLogic_U2Basic%E9%82%8F%E8%BC%AF%E5%88%86%E6%9E%90%E5%84%80%E9%96%8B%E7%AE%B1/4DsgAUT.png"></p>
+<p><img src="/2022/02/21/DSLogic_U2Basic%E9%82%8F%E8%BC%AF%E5%88%86%E6%9E%90%E5%84%80%E9%96%8B%E7%AE%B1/gr0a4SY.jpg" alt=""></p>
+<p>插上電腦的樣子，他用的接頭不是一般的2.54mm的頭，而是比較細的頭<br>
+有一個轉接線，線好像是鍍銀線，比較硬，每四條訊號就有一個接地線</p>
+<p>不過之後打開PulseView後卻發現抓不到設備<br>
+看了一下wiki發現<br>
+<img src="/2022/02/21/DSLogic_U2Basic%E9%82%8F%E8%BC%AF%E5%88%86%E6%9E%90%E5%84%80%E9%96%8B%E7%AE%B1/74kjTZy.png" alt=""></p>
+<p>沒想到居然還沒支援…<br>
+可能是他比較新，是取代Basic的產品，所以現在PulseView還沒支援</p>
+<p>只好去官網下載夢源實驗室他們的軟體<br>
+<img src="/2022/02/21/DSLogic_U2Basic%E9%82%8F%E8%BC%AF%E5%88%86%E6%9E%90%E5%84%80%E9%96%8B%E7%AE%B1/SFejjUE.png" alt=""></p>
+<p>接上訊號後，能正確測量SPI訊號，而且有解析協議<br>
+可是…UI還是不怎麼習慣 (′･ω･`)</p>
+<p>不過沒關係<br>
+<a target="_blank" rel="noopener" href="https://habr.com/ru/post/483496/">俄羅斯人破解了U2Basic</a>，縮只要換上一個256M的SDRAM，飛一根線，再改一下韌體，就能升級成Plus版<br>
+（原來Basic只要換RAM+改韌體就可以升級，U2改了電路板）</p>
+<p>Plus是被PulseView官方支援的<br>
+<img src="/2022/02/21/DSLogic_U2Basic%E9%82%8F%E8%BC%AF%E5%88%86%E6%9E%90%E5%84%80%E9%96%8B%E7%AE%B1/4DsgAUT.png" alt=""></p>
 <p>等SDRAM寄過來後，就來升級八</p>
 
     </div>

@@ -234,14 +234,20 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>雖然說Chrome有非常好用的同步功能，只要登入Google帳號，就能同步所有設定和已安裝的外掛<br>但美中不足的是，外掛中的設定並不會被同步，每次遷移瀏覽器時都要手動去備份和還原每一個外掛的設定，如果是一兩個倒還好，但如果安裝了十幾個外掛，遷移的過程就變得非常煩人<br>而以前我遷移瀏覽器時，都是直接備份User Data資料夾，可以一次將所有資料轉移到新的環境，完成無痛遷移<br>但某次Chrome更新後就不能使用User Data大法<br>所以我一直想換掉Chrome，改用開源的Chromium，但想到每個外掛都要手動備份設定檔就懶得動orz<br>最近想說在這樣拖下去不行了，就開始找方法來搞</p>
-<h2 id="設定"><a href="#設定" class="headerlink" title="設定"></a>設定</h2><p>首先先安裝Chromium，然後開始同步，把基本的東西先同步過來<br>同步完成後打開設定檔</p>
+          <h2 id="前言">前言</h2>
+<p>雖然說Chrome有非常好用的同步功能，只要登入Google帳號，就能同步所有設定和已安裝的外掛<br>
+但美中不足的是，外掛中的設定並不會被同步，每次遷移瀏覽器時都要手動去備份和還原每一個外掛的設定，如果是一兩個倒還好，但如果安裝了十幾個外掛，遷移的過程就變得非常煩人<br>
+而以前我遷移瀏覽器時，都是直接備份User Data資料夾，可以一次將所有資料轉移到新的環境，完成無痛遷移<br>
+但某次Chrome更新後就不能使用User Data大法<br>
+所以我一直想換掉Chrome，改用開源的Chromium，但想到每個外掛都要手動備份設定檔就懶得動orz<br>
+最近想說在這樣拖下去不行了，就開始找方法來搞</p>
+<h2 id="設定">設定</h2>
+<p>首先先安裝Chromium，然後開始同步，把基本的東西先同步過來<br>
+同步完成後打開設定檔</p>
 <p>Chrome是在</p>
 <figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">C:\<span class="title">Users</span>\%<span class="title">Username</span>%\<span class="title">AppData</span>\<span class="title">Local</span>\<span class="title">Google</span>\<span class="title">Chrome</span>\<span class="title">User</span> <span class="title">Data</span>\<span class="title">Default</span></span></span><br></pre></td></tr></table></figure>
-
 <p>Chromium是在</p>
 <figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">C:\<span class="title">Users</span>\%<span class="title">Username</span>%\<span class="title">AppData</span>\<span class="title">Local</span>\<span class="title">Chromium</span>\<span class="title">User</span> <span class="title">Data</span>\<span class="title">Default</span></span></span><br></pre></td></tr></table></figure>
-
 <p>然後複製這三個資料夾過去</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Local App Settings</span><br><span class="line">Local Extension Settings</span><br><span class="line">Local Storage</span><br></pre></td></tr></table></figure>
           <!--noindex-->
@@ -338,15 +344,26 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>因為閱讀code，如果沒有可以查詢定義的功能的話，會很不方便，加上使用vim，所以之前就參考<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/36279445">這裡</a>來設定<br>但不知道為何，在我的桌機上一直沒辦法正常運作(win10)<br>因為很麻煩，放棄了一段時間，又因為要用到，所以又重新繼續搞</p>
-<h2 id="設定"><a href="#設定" class="headerlink" title="設定"></a>設定</h2><p>發現之前搞錯了一些東西<br>首先能動的一直是ctags(gtags&amp;gtags-cscope界面太難用了….)<br>我以前一直以為我用的是gtags但其實是ctags…..</p>
-<p>所以一開始就沒有用到gutentags_plus這個插件的功能<br>用的只有<code>vim-gutentags</code><br>這是一個可以在vim8上，在後台執行tags更新的插件</p>
+          <h2 id="前言">前言</h2>
+<p>因為閱讀code，如果沒有可以查詢定義的功能的話，會很不方便，加上使用vim，所以之前就參考<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/36279445">這裡</a>來設定<br>
+但不知道為何，在我的桌機上一直沒辦法正常運作(win10)<br>
+因為很麻煩，放棄了一段時間，又因為要用到，所以又重新繼續搞</p>
+<h2 id="設定">設定</h2>
+<p>發現之前搞錯了一些東西<br>
+首先能動的一直是ctags(gtags&amp;gtags-cscope界面太難用了…)<br>
+我以前一直以為我用的是gtags但其實是ctags…</p>
+<p>所以一開始就沒有用到gutentags_plus這個插件的功能<br>
+用的只有<code>vim-gutentags</code><br>
+這是一個可以在vim8上，在後台執行tags更新的插件</p>
 <p>他的設定</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">let g:gutentags_modules = [&#x27;ctags&#x27;, &#x27;gtags_cscope&#x27;]</span><br><span class="line">let g:gutentags_project_root = [&#x27;.root&#x27;, &#x27;.git&#x27;]</span><br><span class="line">let g:gutentags_cache_dir = expand(&#x27;~/.cache/tags&#x27;)</span><br></pre></td></tr></table></figure>
-
 <p>意思是說會在打開的目錄向上搜尋，直到遇到<code>.root</code>或<code>.git</code>，然後在<code>~/.cache/tags</code>建立ctags和gtags的tag檔</p>
-<p>因為只要用到ctags所以改成<br><code>let g:gutentags_modules = [&#39;ctags&#39;]</code><br>就只會建立ctags檔了</p>
-<p>照理來說，此時只要打開專案裡的原始檔，此插件就會自動產生tags擋了，然後自動設定ctags<br>就能用&lt;C-]&gt; &lt;C-t&gt;在程式碼之間跳轉了<br>但我發現，在win10的wsl和msys2環境裡，在<code>~/.cache/tags</code>裡的tags檔會呈現</p>
+<p>因為只要用到ctags所以改成<br>
+<code>let g:gutentags_modules = ['ctags']</code><br>
+就只會建立ctags檔了</p>
+<p>照理來說，此時只要打開專案裡的原始檔，此插件就會自動產生tags擋了，然後自動設定ctags<br>
+就能用&lt;C-]&gt; &lt;C-t&gt;在程式碼之間跳轉了<br>
+但我發現，在win10的wsl和msys2環境裡，在<code>~/.cache/tags</code>裡的tags檔會呈現</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2019/04/23/%E5%88%A9%E7%94%A8Gutentags%E5%92%8Cctags%E9%96%B1%E8%AE%80%E7%A8%8B%E5%BC%8F%E7%A2%BC/#more" rel="contents">
@@ -441,11 +458,16 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>還是記個筆記吧</p>
-<p>暑假時用的rclone，寒假就全忘光了….<br>雖然有存當初的網址，但重新掌握還是需要時間<br>加上這次學了不少新東西，還是記個筆記比較實在…</p>
-<h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><pre><code>    rclone 動作 來源地址 目標地址 flag
+          <h2 id="前言">前言</h2>
+<p>還是記個筆記吧</p>
+<p>暑假時用的rclone，寒假就全忘光了…<br>
+雖然有存當初的網址，但重新掌握還是需要時間<br>
+加上這次學了不少新東西，還是記個筆記比較實在…</p>
+<h2 id="使用方法">使用方法</h2>
+<pre><code>    rclone 動作 來源地址 目標地址 flag
 </code></pre>
-<h2 id="常用動作"><a href="#常用動作" class="headerlink" title="常用動作"></a>常用動作</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">config  (設定)</span><br><span class="line">ls      (列出目錄與子目錄底下全部的元素)</span><br><span class="line">lsd     (只列出目錄底下的元素)</span><br><span class="line">copy    (複製，略過已經複製過的)</span><br><span class="line">sync    (同步，以來源為準，目標少的會複製、多的會刪除)</span><br><span class="line">來源位置&amp;目標位置可為 本機位置 或 遠端位置</span><br></pre></td></tr></table></figure>
+<h2 id="常用動作">常用動作</h2>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">config  (設定)</span><br><span class="line">ls      (列出目錄與子目錄底下全部的元素)</span><br><span class="line">lsd     (只列出目錄底下的元素)</span><br><span class="line">copy    (複製，略過已經複製過的)</span><br><span class="line">sync    (同步，以來源為準，目標少的會複製、多的會刪除)</span><br><span class="line">來源位置&amp;目標位置可為 本機位置 或 遠端位置</span><br></pre></td></tr></table></figure>
 <p>flag常用的有</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">-v</span><br><span class="line">（顯示完整資訊，想要顯示進度要有這項）</span><br><span class="line">--bwlimit xxxxK/M/G</span><br><span class="line">（限制上傳速度，後面是單位可為K/M/G，例如：--bwlimit 8000k)</span><br><span class="line">--checksum</span><br><span class="line">（上傳時做完整檢查，以確保來源與目標完全相同(<span class="built_in">hash</span>?)，需要注意的是，過程中硬碟會不停的讀取且速度會降低）</span><br><span class="line">--size-only</span><br><span class="line">（上傳時只比對檔案的大小，相對checksum快，但可能有錯）</span><br><span class="line">--dry-run</span><br><span class="line">（試跑一次，看看會對目標做什麼變動）</span><br><span class="line">--transfers int</span><br><span class="line">(一次傳送多少個檔案，預設為4)</span><br></pre></td></tr></table></figure>
 <p>範例</p>
@@ -543,20 +565,19 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>昨天看到原價屋有一塊SSD好便宜的<br>雖然沒有很需要新的SSD<br>但當我打開測試軟體來測我的Ezlink之後</p>
+          <h2 id="前言">前言</h2>
+<p>昨天看到原價屋有一塊SSD好便宜的<br>
+雖然沒有很需要新的SSD<br>
+但當我打開測試軟體來測我的Ezlink之後</p>
 
 <img src="/2019/02/11/Micron-BX500-240G-%E9%96%8B%E7%AE%B1/B4IbalW.jpg" class>
-
 <p>我就去買了新的SSD</p>
 <img src="/2019/02/11/Micron-BX500-240G-%E9%96%8B%E7%AE%B1/FyjjHU0.jpg" class>
-
 <p>打開來就一張說明書&amp;本體</p>
 <img src="/2019/02/11/Micron-BX500-240G-%E9%96%8B%E7%AE%B1/zmBO0xj.jpg" class>
-
 <p>本體長這樣</p>
 <img src="/2019/02/11/Micron-BX500-240G-%E9%96%8B%E7%AE%B1/i41qs6t.jpg" class>
-
-<h2 id="拆解＆上機"><a href="#拆解＆上機" class="headerlink" title="拆解＆上機"></a>拆解＆上機</h2>
+<h2 id="拆解＆上機">拆解＆上機</h2>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2019/02/11/Micron-BX500-240G-%E9%96%8B%E7%AE%B1/#more" rel="contents">
@@ -651,12 +672,18 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>前幾天買了一隻便宜的NOTE 4x<br>但是螢幕有問題<br>在某些情況下有垂直紅線<br>有迷之水平線條(? 懷疑是排線問題</p>
-<p>拆開來後，調整了排線，顯示有一定程度的緩解<br>但是下方功能鍵不能用了，奇怪的是，打開螢幕觸控顯示，發現手機有偵測到電容按鈕的觸發，但顯示觸發在螢幕最下方所以想說乾脆換一個螢幕</p>
-<p>我本來想把我亂拆一通的手機拿去聯強維修點讓他幫我換螢幕(13XX)，但過去後發現連假休息，星期一才開，但我到星期四才有空，於是就去淘寶上找了….</p>
+          <h2 id="前言">前言</h2>
+<p>前幾天買了一隻便宜的NOTE 4x<br>
+但是螢幕有問題<br>
+在某些情況下有垂直紅線<br>
+有迷之水平線條(? 懷疑是排線問題</p>
+<p>拆開來後，調整了排線，顯示有一定程度的緩解<br>
+但是下方功能鍵不能用了，奇怪的是，打開螢幕觸控顯示，發現手機有偵測到電容按鈕的觸發，但顯示觸發在螢幕最下方所以想說乾脆換一個螢幕</p>
+<p>我本來想把我亂拆一通的手機拿去聯強維修點讓他幫我換螢幕(13XX)，但過去後發現連假休息，星期一才開，但我到星期四才有空，於是就去淘寶上找了…</p>
 <p>淘寶上有很多便宜的螢幕，大約3XX元就有了，但稍微查一下資料後發現，這水很深，好像很多都不是原廠的螢幕，後來也不知道怎麼找，所以就買了有發安裝影片的店家，加運費大概花了900</p>
 <p>順便買了保護套&amp;保護貼，一起送過來，結果總共花了1100元</p>
-<h2 id="螢幕"><a href="#螢幕" class="headerlink" title="螢幕"></a>螢幕</h2><p>原本長這樣</p>
+<h2 id="螢幕">螢幕</h2>
+<p>原本長這樣</p>
 <img src="/2019/02/11/%E7%B4%85%E7%B1%B3NOTE-4x%E6%8F%9B%E8%9E%A2%E5%B9%95-%E5%88%B7lineageos%E5%BF%83%E5%BE%97/uO7RGxt.jpg" class>
 <img src="/2019/02/11/%E7%B4%85%E7%B1%B3NOTE-4x%E6%8F%9B%E8%9E%A2%E5%B9%95-%E5%88%B7lineageos%E5%BF%83%E5%BE%97/MkbPHOg.jpg" class>
           <!--noindex-->
@@ -753,8 +780,9 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>原本只是想買一個散熱器，結果爬文的時候看到有人說e5-2670很便宜，查了一下，結果就買下去了，電腦當然不能只買主機，所以連螢幕也買了，買了這些之後，還差一 個鍵盤…..結果就沒錢啦QQ</p>
-<p>先說一下我的用途：上網、看影片，文書機就能滿足的需求<br>結果我的電腦：</p>
+          <p>原本只是想買一個散熱器，結果爬文的時候看到有人說e5-2670很便宜，查了一下，結果就買下去了，電腦當然不能只買主機，所以連螢幕也買了，買了這些之後，還差一 個鍵盤…結果就沒錢啦QQ</p>
+<p>先說一下我的用途：上網、看影片，文書機就能滿足的需求<br>
+結果我的電腦：</p>
 <pre><code>CPU (中央處理器)：INTEL E5-2670 （8c16t)      
 MB (主機板)：HP z420 (拆機板） 
 RAM (記憶體)：ECC REG 8G*8 
@@ -764,11 +792,10 @@ PSU (電源供應器)：酷碼 CM G450W 80+ 結果不能用，所以沿用黑騎
 CHASSIS (機殼)：SAMA 極靜者(黑) 顯卡長41/風扇高17/SSD*3/讀卡機/ATX 
 MONITOR (螢幕)：Benq GW2760s
 </code></pre>
-<p> 用途：上網、看影片…..</p>
+<p>用途：上網、看影片…</p>
 <p>CPU真的頗大，不愧是2011腳位的</p>
 <img src="/2019/02/11/E5-2670%E6%92%BF%E5%9E%83%E5%9C%BE%E5%BF%83%E5%BE%97/c4INgqo.jpg" class>
 <img src="/2019/02/11/E5-2670%E6%92%BF%E5%9E%83%E5%9C%BE%E5%BF%83%E5%BE%97/q8wp5F0.jpg" class>
-
 <p>記憶體，因為是ECC REG的，一般電腦無法使用，所以在淘寶上很便宜，一條我買大概是 72RMB，我買了8條來插好插滿</p>
 <img src="/2019/02/11/E5-2670%E6%92%BF%E5%9E%83%E5%9C%BE%E5%BF%83%E5%BE%97/wcKOXhq.jpg" class>
 <img src="/2019/02/11/E5-2670%E6%92%BF%E5%9E%83%E5%9C%BE%E5%BF%83%E5%BE%97/x7jDREc.jpg" class>
@@ -866,9 +893,13 @@ MONITOR (螢幕)：Benq GW2760s
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>雖然之前也有寫過blog但後來都荒廢了<br>剛好新的一年新氣象，就開個新地圖八</p>
-<p>這個blog是使用hexo技術架在github page上的，雖然一年前友人曾推薦給我過，但當時我並沒有接觸過github，只覺得「蛤，架個blog還要學這麼多東西阿～」所以就沒有使用，改用其他blog服務了<br>在這一年間稍稍接觸過github，再回過頭來看，發覺這樣的組合實在是方便又簡單，也難怪當初友人會如此推薦！</p>
-<p>這裡基本上算是我個人的筆記，但看看之前放棄的紀錄<br>也只能說是希望了<br>如果能堅持把文章寫的多些就好了…..</p>
+          <p>雖然之前也有寫過blog但後來都荒廢了<br>
+剛好新的一年新氣象，就開個新地圖八</p>
+<p>這個blog是使用hexo技術架在github page上的，雖然一年前友人曾推薦給我過，但當時我並沒有接觸過github，只覺得「蛤，架個blog還要學這麼多東西阿～」所以就沒有使用，改用其他blog服務了<br>
+在這一年間稍稍接觸過github，再回過頭來看，發覺這樣的組合實在是方便又簡單，也難怪當初友人會如此推薦！</p>
+<p>這裡基本上算是我個人的筆記，但看看之前放棄的紀錄<br>
+也只能說是希望了<br>
+如果能堅持把文章寫的多些就好了…</p>
 
           <!--noindex-->
             <div class="post-button">
